@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SectionHeader from '@/components/ui/SectionHeader';
+import AnimatedButton from '@/components/ui/AnimatedButton';
 
 const AboutUs = () => {
   return (
@@ -12,32 +14,23 @@ const AboutUs = () => {
           
           {/* Right: About Us Content (Ordered 1 on mobile) */}
           <div className="xl:pl-8 order-1 xl:order-2">
-            {/* Section Title */}
-            <div className="mb-10 text-left">
-              <div className="flex items-center mb-4">
-                <span className="w-12 h-0.5 bg-[#aa8b57] mr-4 shrink-0 inline-block"></span>
-                <h3 className="text-[#aa8b57] text-lg md:text-xl font-bold uppercase tracking-wider">
-                  Company Introduction
-                </h3>
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-[#192324] leading-[1.1em] mb-6 tracking-tight">
-                With Artisan Spirits,<br />
-                <span className="text-[#aa8b57]">We Realize Your Vision</span>
-              </h2>
-              
-              <div className="space-y-4 text-[#283132] text-base md:text-lg leading-[1.7em]">
-                <p>
-                  Y&Y Design Build is a full-service firm based in Vancouver,
-                  specializing in residential and commercial design and
-                  renovations.
-                </p>
-                <p>
-                  We offer a fully integrated process — from concept and
-                  planning to construction — to bring your vision to life with
-                  clarity, care, and craftsmanship.
-                </p>
-              </div>
+            {/* Section Header */}
+            <SectionHeader 
+              title="Company Introduction"
+              subtitle={<>With Artisan Spirits,<br /> <span className="text-[#aa8b57]">We Realize Your Vision</span></>}
+            />
+            
+            <div className="space-y-4 text-[#283132] text-base md:text-lg leading-[1.7em] -mt-4 mb-10">
+              <p>
+                Y&Y Design Build is a full-service firm based in Vancouver,
+                specializing in residential and commercial design and
+                renovations.
+              </p>
+              <p>
+                We offer a fully integrated process — from concept and
+                planning to construction — to bring your vision to life with
+                clarity, care, and craftsmanship.
+              </p>
             </div>
 
             {/* Content Body */}
@@ -70,20 +63,11 @@ const AboutUs = () => {
                   </div>
                   
                   <div className="flex justify-start">
-                    <Link 
+                    <AnimatedButton 
                       href="/services" 
-                      className="group relative inline-flex items-center justify-center bg-[#aa8b57] text-white font-bold text-[14px] md:text-[15px] px-8 md:px-10 py-3.5 md:py-4 overflow-hidden rounded-md transition-all duration-500 shadow-lg hover:shadow-xl"
-                    >
-                      <span className="absolute left-0 w-0 h-full bg-[#192324] transition-all duration-500 group-hover:w-full"></span>
-                      <span className="relative z-10 pr-6 capitalize tracking-widest">Our Services</span>
-                      <Image 
-                        src="/images/arrow-white.svg" 
-                        alt="Arrow" 
-                        width={18} 
-                        height={18} 
-                        className="absolute right-5 top-1/2 -translate-y-1/2 z-10 transition-transform duration-400 group-hover:translate-x-1" 
-                      />
-                    </Link>
+                      text="Our Services" 
+                      variant="primary"
+                    />
                   </div>
                 </div>
 
@@ -145,7 +129,7 @@ const AboutUs = () => {
                 alt="About Y & Y Construction 1" 
                 fill 
                 className="object-cover"
-                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 70vw, 35vw"
+                sizes="(max-width: 768px) 90vw, 35vw"
               />
             </div>
 

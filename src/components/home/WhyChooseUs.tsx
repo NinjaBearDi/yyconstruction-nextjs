@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 const WhyChooseUs = () => {
   const features = [
@@ -46,22 +47,13 @@ const WhyChooseUs = () => {
           
           {/* Top/Left: Content */}
           <div className="2xl:col-span-5">
-            <div className="mb-10 md:mb-12 text-center 2xl:text-left">
-              <div className="flex items-center mb-4 justify-center 2xl:justify-start">
-                <span className="w-12 h-0.5 bg-[#aa8b57] mr-4 shrink-0 inline-block"></span>
-                <h3 className="text-lg md:text-xl font-bold uppercase tracking-wider text-[#aa8b57]">
-                  Why Choose Us
-                </h3>
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 tracking-tight">
-                Provide <span className="text-[#aa8b57]">comprehensive spatial solutions</span>
-              </h2>
-              
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-4xl mx-auto 2xl:mx-0">
-                From concept to completion, discover how we bring your vision to life with innovation, collaboration, and expert craftsmanship.
-              </p>
-            </div>
+            <SectionHeader 
+              title="Why Choose Us"
+              subtitle={<>Provide <span className="text-[#aa8b57]">comprehensive spatial solutions</span></>}
+              description="From concept to completion, discover how we bring your vision to life with innovation, collaboration, and expert craftsmanship."
+              light={true}
+              className="text-center 2xl:text-left [&>div.flex]:justify-center 2xl:[&>div.flex]:justify-start mb-8 md:mb-10 [&>p]:max-w-4xl [&>p]:mx-auto 2xl:[&>p]:mx-0"
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-1 gap-x-10 gap-y-2 md:gap-y-4">
               {features.map((feature) => (
@@ -95,7 +87,7 @@ const WhyChooseUs = () => {
                     alt="Work in progress 1" 
                     fill 
                     className="object-cover"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1536px) 45vw, 35vw"
+                    sizes="(max-width: 768px) 50vw, 35vw"
                   />
                 </div>
                 <div className="relative aspect-square rounded-lg overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
@@ -104,7 +96,7 @@ const WhyChooseUs = () => {
                     alt="Finished project 2" 
                     fill 
                     className="object-cover"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1536px) 45vw, 35vw"
+                    sizes="(max-width: 768px) 50vw, 35vw"
                   />
                 </div>
               </div>
@@ -117,7 +109,7 @@ const WhyChooseUs = () => {
                     alt="Finished project 1" 
                     fill 
                     className="object-cover"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1536px) 45vw, 35vw"
+                    sizes="(max-width: 768px) 50vw, 35vw"
                   />
                 </div>
                 <div className="relative aspect-square rounded-lg overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
@@ -126,7 +118,7 @@ const WhyChooseUs = () => {
                     alt="Interior detail" 
                     fill 
                     className="object-cover"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1536px) 45vw, 35vw"
+                    sizes="(max-width: 768px) 50vw, 35vw"
                   />
                 </div>
                 

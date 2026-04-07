@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 const services = [
   {
@@ -51,18 +52,11 @@ const OurServices = () => {
       <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 lg:mb-20 items-end">
-          <div>
-            <div className="flex items-center mb-4">
-              <span className="w-12 h-0.5 bg-[#aa8b57] mr-4 shrink-0 inline-block"></span>
-              <h3 className="text-xl font-bold uppercase tracking-wider text-[#aa8b57]">
-                our services
-              </h3>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#192324] leading-tight tracking-tight">
-              Innovative design services for{' '}
-              <span className="text-[#aa8b57]">every need</span>
-            </h2>
-          </div>
+          <SectionHeader 
+            title="our services"
+            subtitle={<>Innovative design services for <span className="text-[#aa8b57]">every need</span></>}
+            className="!mb-0 [&>h2]:!mb-0"
+          />
           <div className="lg:pl-12 lg:pb-2">
             <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl">
               We offer a range of bespoke interior design services tailored to your unique needs. From concept development to final installation.

@@ -1,7 +1,9 @@
 import HeroSection from '@/components/home/HeroSection';
 import AboutUs from '@/components/home/AboutUs';
-import OurServices from '@/components/home/OurServices';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
+import OurServices from '@/components/home/OurServices';
+import HowWeWork from '@/components/home/HowWeWork';
+import PortfolioPreview from '@/components/home/PortfolioPreview';
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <AboutUs />
       <WhyChooseUs />
       <OurServices />
+      <HowWeWork />
+      <PortfolioPreview />
     </div>
   );
 }

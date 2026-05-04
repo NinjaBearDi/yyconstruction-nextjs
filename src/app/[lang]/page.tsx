@@ -5,7 +5,7 @@ import WhyChooseUs from '@/components/home/WhyChooseUs';
 import OurServices from '@/components/home/OurServices';
 import HowWeWork from '@/components/home/HowWeWork';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
-import { getProjects } from '@/lib/payload/queries';
+import { getProjects } from '@/lib/payload/project-queries';
 
 export default async function HomePage({
   params

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getDictionary } from '@/lib/get-dictionary';
-import { getOurTeamPage } from '@/lib/payload/queries';
-import type { OurTeamGroup, OurTeamMember } from '@/lib/payload/queries';
+import { getOurTeamPage } from '@/lib/payload/global-queries';
+import type { OurTeamGroup, OurTeamMember } from '@/lib/payload/global-queries';
 import PageHeader from '@/components/ui/PageHeader';
 import SectionHeader from '@/components/ui/SectionHeader';
 

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { Project } from '@/lib/payload/queries';
+import type { Project } from '@/lib/payload/project-queries';
 
 interface PortfolioGridProps {
   projects: Project[];

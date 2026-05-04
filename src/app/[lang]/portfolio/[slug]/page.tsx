@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
-import { getProjectBySlug, getRelatedProjects, getAllProjectSlugs } from '@/lib/payload/queries';
+import { getProjectBySlug, getRelatedProjects, getAllProjectSlugs } from '@/lib/payload/project-queries';
 import ProjectGallery from './ProjectGallery';
 
 export async function generateStaticParams() {

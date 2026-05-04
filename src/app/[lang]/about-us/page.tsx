@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { getDictionary } from '@/lib/get-dictionary';
-import { getAboutPage } from '@/lib/payload/queries';
+import { getAboutPage } from '@/lib/payload/global-queries';
 import PageHeader from '@/components/ui/PageHeader';
 import SectionHeader from '@/components/ui/SectionHeader';
 

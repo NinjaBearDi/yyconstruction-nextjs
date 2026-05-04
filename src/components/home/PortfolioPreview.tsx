@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import SectionHeader from '@/components/ui/SectionHeader';
 import AnimatedButton from '@/components/ui/AnimatedButton';
-import type { Project } from '@/lib/payload/queries';
+import type { Project } from '@/lib/payload/project-queries';
 
 interface PortfolioPreviewProps {
   projects: Project[];

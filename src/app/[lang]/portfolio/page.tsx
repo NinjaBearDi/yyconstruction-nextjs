@@ -1,7 +1,7 @@
 import React from 'react';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
-import { getProjects } from '@/lib/payload/queries';
+import { getProjects } from '@/lib/payload/project-queries';
 import PortfolioGrid from './PortfolioGrid';
 
 export default async function PortfolioPage({

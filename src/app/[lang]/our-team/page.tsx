@@ -1,21 +1,11 @@
-import React from 'react';
 import Image from 'next/image';
 import { getDictionary } from '@/lib/get-dictionary';
+import { getOurTeamPage } from '@/lib/payload/queries';
+import type { OurTeamGroup, OurTeamMember } from '@/lib/payload/queries';
 import PageHeader from '@/components/ui/PageHeader';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 const S3_BASE = 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca';
-
-interface TeamMember {
-  name: string;
-  title: string;
-  image: string;
-}
-
-interface TeamGroup {
-  name: string;
-  members: TeamMember[];
-}
 
 export default async function OurTeamPage({
   params,
@@ -24,7 +14,17 @@ export default async function OurTeamPage({
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const data = dict.ourTeam;
+  const fallback = {
+    ...dict.ourTeam,
+    groups: dict.ourTeam.groups.map((g: { name: string; members: { name: string; title: string; image: string }[] }) => ({
+      ...g,
+      members: g.members.map((m) => ({
+        ...m,
+        image: `${S3_BASE}/${m.image}`,
+      })),
+    })),
+  };
+  const data = await getOurTeamPage(lang, fallback);
 
   return (
     <main className="bg-white">
@@ -57,7 +57,7 @@ export default async function OurTeamPage({
 
           {/* Team Groups */}
           <div className="mt-16 lg:mt-20 space-y-16 lg:space-y-20">
-            {data.groups.map((group: TeamGroup, gIdx: number) => {
+            {data.groups.map((group: OurTeamGroup, gIdx: number) => {
               const isLargeGroup = group.members.length > 3;
 
               return (
@@ -78,7 +78,7 @@ export default async function OurTeamPage({
                         : 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6 max-w-3xl'
                     }
                   >
-                    {group.members.map((member: TeamMember, mIdx: number) => (
+                    {group.members.map((member: OurTeamMember, mIdx: number) => (
                       <div
                         key={mIdx}
                         className="group"
@@ -87,7 +87,7 @@ export default async function OurTeamPage({
                         <div className="relative overflow-hidden rounded-xl mb-4">
                           <div className="aspect-[1/1.11]">
                             <Image
-                              src={`${S3_BASE}/${member.image}`}
+                              src={member.image}
                               alt={member.name}
                               fill
                               className="object-cover transition-transform duration-500 group-hover:scale-110"

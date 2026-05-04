@@ -93,9 +93,11 @@ export interface Config {
   fallbackLocale: ('false' | 'none' | 'null') | false | null | ('en' | 'zh') | ('en' | 'zh')[];
   globals: {
     'about-page': AboutPage;
+    'our-team-page': OurTeamPage;
   };
   globalsSelect: {
     'about-page': AboutPageSelect<false> | AboutPageSelect<true>;
+    'our-team-page': OurTeamPageSelect<false> | OurTeamPageSelect<true>;
   };
   locale: 'en' | 'zh';
   widgets: {
@@ -523,6 +525,42 @@ export interface AboutPage {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "our-team-page".
+ */
+export interface OurTeamPage {
+  id: number;
+  header?: {
+    title?: string | null;
+    breadcrumb?:
+      | {
+          label: string;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  sectionTitle?: string | null;
+  subtitle?: string | null;
+  subtitleAccent?: string | null;
+  description?: string | null;
+  groups?:
+    | {
+        name: string;
+        members?:
+          | {
+              name: string;
+              title: string;
+              photo: number | Media;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "about-page_select".
  */
 export interface AboutPageSelect<T extends boolean = true> {
@@ -581,6 +619,44 @@ export interface AboutPageSelect<T extends boolean = true> {
               title?: T;
               description?: T;
             };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "our-team-page_select".
+ */
+export interface OurTeamPageSelect<T extends boolean = true> {
+  header?:
+    | T
+    | {
+        title?: T;
+        breadcrumb?:
+          | T
+          | {
+              label?: T;
+              id?: T;
+            };
+      };
+  sectionTitle?: T;
+  subtitle?: T;
+  subtitleAccent?: T;
+  description?: T;
+  groups?:
+    | T
+    | {
+        name?: T;
+        members?:
+          | T
+          | {
+              name?: T;
+              title?: T;
+              photo?: T;
+              id?: T;
+            };
+        id?: T;
       };
   updatedAt?: T;
   createdAt?: T;

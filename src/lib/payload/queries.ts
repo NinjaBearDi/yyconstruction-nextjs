@@ -228,3 +228,73 @@ export async function getAboutPage(
     },
   }
 }
+
+export interface OurTeamMember {
+  name: string
+  title: string
+  image: string
+}
+
+export interface OurTeamGroup {
+  name: string
+  members: OurTeamMember[]
+}
+
+export interface OurTeamPageData {
+  header: { title: string; breadcrumb: string[] }
+  sectionTitle: string
+  subtitle: string
+  subtitleAccent: string
+  description: string
+  groups: OurTeamGroup[]
+}
+
+export async function getOurTeamPage(
+  locale: 'en' | 'zh',
+  fallback: OurTeamPageData,
+): Promise<OurTeamPageData> {
+  const payload = await getPayload({ config })
+
+  const data = (await payload.findGlobal({
+    slug: 'our-team-page',
+    locale,
+    depth: 1,
+  })) as unknown as Record<string, unknown>
+
+  const header = (data.header ?? {}) as Record<string, unknown>
+  const breadcrumbItems = nonEmptyArray<{ label?: string }>(header.breadcrumb)
+  const groupItems = nonEmptyArray<Record<string, unknown>>(data.groups)
+
+  const groups: OurTeamGroup[] | undefined = groupItems
+    ? groupItems
+        .map((g) => {
+          const memberItems = nonEmptyArray<Record<string, unknown>>(g.members)
+          if (!nonEmptyString(g.name as unknown) && !memberItems) return null
+          return {
+            name: (g.name as string) ?? '',
+            members: memberItems
+              ? memberItems.map((m) => ({
+                  name: (m.name as string) ?? '',
+                  title: (m.title as string) ?? '',
+                  image: getMediaUrl(m.photo as number | PayloadMedia),
+                }))
+              : [],
+          }
+        })
+        .filter(Boolean) as OurTeamGroup[]
+    : undefined
+
+  return {
+    header: {
+      title: nonEmptyString(header.title) ?? fallback.header.title,
+      breadcrumb: breadcrumbItems
+        ? breadcrumbItems.map((b) => b.label ?? '').filter(Boolean)
+        : fallback.header.breadcrumb,
+    },
+    sectionTitle: nonEmptyString(data.sectionTitle) ?? fallback.sectionTitle,
+    subtitle: nonEmptyString(data.subtitle) ?? fallback.subtitle,
+    subtitleAccent: nonEmptyString(data.subtitleAccent) ?? fallback.subtitleAccent,
+    description: nonEmptyString(data.description) ?? fallback.description,
+    groups: groups && groups.length > 0 ? groups : fallback.groups,
+  }
+}

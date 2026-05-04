@@ -11,6 +11,7 @@ import { Media } from './collections/Media'
 import { Projects } from './collections/Projects'
 import { Services } from './collections/Services'
 import { AboutPage } from './globals/AboutPage'
+import { OurTeamPage } from './globals/OurTeamPage'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -23,7 +24,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Projects, Services],
-  globals: [AboutPage],
+  globals: [AboutPage, OurTeamPage],
   editor: lexicalEditor(),
   localization: {
     locales: [

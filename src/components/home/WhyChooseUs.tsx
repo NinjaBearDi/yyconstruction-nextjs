@@ -2,32 +2,28 @@ import React from 'react';
 import Image from 'next/image';
 import SectionHeader from '@/components/ui/SectionHeader';
 
-const WhyChooseUs = () => {
-  const features = [
-    {
-      id: 1,
-      title: "Integrated Service:",
-      description: "Seamless collaboration between design and construction for smoother communication.",
-      icon: "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-1.svg"
-    },
-    {
-      id: 2,
-      title: "Experienced Team:",
-      description: "Professionals with deep expertise in residential and commercial renovations.",
-      icon: "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-2.svg"
-    },
-    {
-      id: 3,
-      title: "Transparent Process:",
-      description: "Detailed budgeting and timelines, with no hidden fees.",
-      icon: "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-3.svg"
-    },
-    {
-      id: 4,
-      title: "Client-Centered:",
-      description: "Bilingual service (English & Chinese) with fast response and clear communication.",
-      icon: "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-3.svg"
-    }
+interface Feature {
+  title: string;
+  description: string;
+}
+
+interface WhyChooseUsProps {
+  dict: {
+    title: string;
+    subtitle: string;
+    subtitleAccent: string;
+    description: string;
+    years: string;
+    features: Feature[];
+  };
+}
+
+const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
+  const icons = [
+    "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-1.svg",
+    "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-2.svg",
+    "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-3.svg",
+    "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-3.svg"
   ];
 
   return (
@@ -48,19 +44,19 @@ const WhyChooseUs = () => {
           {/* Top/Left: Content */}
           <div className="2xl:col-span-5">
             <SectionHeader 
-              title="Why Choose Us"
-              subtitle={<>Provide <span className="text-[#aa8b57]">comprehensive spatial solutions</span></>}
-              description="From concept to completion, discover how we bring your vision to life with innovation, collaboration, and expert craftsmanship."
+              title={dict.title}
+              subtitle={<>{dict.subtitle} <span className="text-[#aa8b57]">{dict.subtitleAccent}</span></>}
+              description={dict.description}
               light={true}
               className="text-center 2xl:text-left [&>div.flex]:justify-center 2xl:[&>div.flex]:justify-start mb-8 md:mb-10 [&>p]:max-w-4xl [&>p]:mx-auto 2xl:[&>p]:mx-0"
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-1 gap-x-10 gap-y-2 md:gap-y-4">
-              {features.map((feature) => (
-                <div key={feature.id} className="group flex items-start p-3 md:p-4 border-b border-white/10 last:border-0 2xl:last:border-b md:[&:nth-last-child(2)]:border-0 2xl:[&:nth-last-child(2)]:border-b hover:border-[#aa8b57]/30 transition-colors">
+              {dict.features.map((feature, index) => (
+                <div key={index} className="group flex items-start p-3 md:p-4 border-b border-white/10 last:border-0 2xl:last:border-b md:[&:nth-last-child(2)]:border-0 2xl:[&:nth-last-child(2)]:border-b hover:border-[#aa8b57]/30 transition-colors">
                   <div className="relative w-10 h-10 md:w-14 md:h-14 shrink-0 bg-white/10 rounded-full flex items-center justify-center mr-4 md:mr-5 overflow-hidden transition-all duration-300 group-hover:bg-[#aa8b57]">
                     <Image 
-                      src={feature.icon} 
+                      src={icons[index % icons.length]} 
                       alt="" 
                       width={24} 
                       height={24} 
@@ -125,7 +121,7 @@ const WhyChooseUs = () => {
                 {/* Experience Badge */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#aa8b57] w-28 h-28 md:w-36 md:h-36 lg:w-48 xl:w-56 xl:h-56 rounded-full shadow-2xl flex flex-col items-center justify-center z-20 text-center border-4 border-[#192324] px-2 md:px-4">
                   <p className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-1 leading-none">15+</p>
-                  <p className="text-[7px] md:text-[9px] lg:text-xs xl:text-sm font-semibold uppercase tracking-wider text-white/90 leading-tight">Years of Building Excellence</p>
+                  <p className="text-[7px] md:text-[9px] lg:text-xs xl:text-sm font-semibold uppercase tracking-wider text-white/90 leading-tight">{dict.years}</p>
                 </div>
               </div>
             </div>

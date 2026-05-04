@@ -3,7 +3,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedButton from '@/components/ui/AnimatedButton';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  dict: {
+    title: string;
+    titleAccent: string;
+    subtitle: string;
+    explore: string;
+    portfolio: string;
+  };
+}
+
+const HeroSection = ({ dict }: HeroSectionProps) => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background Container */}
@@ -37,12 +47,12 @@ const HeroSection = () => {
                   </div>
                   
                   <h1 className="text-4xl md:text-6xl lg:text-[80px] font-extrabold text-white leading-[1.1] mb-8 tracking-tight max-w-[900px] drop-shadow-2xl">
-                    Designed with purpose <br />
-                    <span className="text-[#aa8b57]">Built with heart</span>
+                    {dict.title} <br />
+                    <span className="text-[#aa8b57]">{dict.titleAccent}</span>
                   </h1>
                   
                   <p className="text-xl md:text-2xl text-white/90 max-w-[700px] leading-relaxed drop-shadow-lg font-medium">
-                    Specializing in high-end residential and commercial design & construction with lasting value in Vancouver.
+                    {dict.subtitle}
                   </p>
                 </div>
 
@@ -50,13 +60,13 @@ const HeroSection = () => {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 md:gap-8 mt-12">
                   <AnimatedButton 
                     href="/services" 
-                    text="Explore Our Services" 
+                    text={dict.explore} 
                     variant="primary" 
                     className="!min-w-[240px]"
                   />
                   <AnimatedButton 
                     href="/portfolio" 
-                    text="Our Portfolio" 
+                    text={dict.portfolio} 
                     variant="white" 
                     className="!min-w-[240px]"
                   />

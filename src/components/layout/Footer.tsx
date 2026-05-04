@@ -74,11 +74,11 @@ const Footer = () => {
             <div className="lg:col-span-4">
               <h3 className="text-[#F1D19D] font-bold text-xl mb-6">Services</h3>
               <ul className="space-y-3">
-                <li><Link href="/residential-design-renovation" className="text-white/80 hover:text-[#aa8b57] transition-colors">Residential Design & Renovation</Link></li>
-                <li><Link href="/commercial-design-renovation" className="text-white/80 hover:text-[#aa8b57] transition-colors">Commercial Design & Renovation</Link></li>
-                <li><Link href="/design-drawings-city-approvals" className="text-white/80 hover:text-[#aa8b57] transition-colors">Design Drawings & City Approvals</Link></li>
-                <li><Link href="/project-management" className="text-white/80 hover:text-[#aa8b57] transition-colors">Project Management</Link></li>
-                <li><Link href="/tear-down-rebuild" className="text-white/80 hover:text-[#aa8b57] transition-colors">Tear-down & Rebuild</Link></li>
+                <li><Link href="/services/residential-design-renovation" className="text-white/80 hover:text-[#aa8b57] transition-colors">Residential Design & Renovation</Link></li>
+                <li><Link href="/services/commercial-design-renovation" className="text-white/80 hover:text-[#aa8b57] transition-colors">Commercial Design & Renovation</Link></li>
+                <li><Link href="/services/design-drawings-city-approvals" className="text-white/80 hover:text-[#aa8b57] transition-colors">Design Drawings & City Approvals</Link></li>
+                <li><Link href="/services/project-management" className="text-white/80 hover:text-[#aa8b57] transition-colors">Project Management</Link></li>
+                <li><Link href="/services/tear-down-rebuild" className="text-white/80 hover:text-[#aa8b57] transition-colors">Tear-down & Rebuild</Link></li>
               </ul>
             </div>
 
@@ -119,8 +119,14 @@ const Footer = () => {
                   <div className="w-10 h-10 rounded-full bg-[#aa8b57] flex items-center justify-center shrink-0 mr-4">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
                   </div>
-                  <div className="pt-1.5 text-white/80 leading-relaxed">
-                    Unit 1 - 2480 Shell Rd, Richmond, British Columbia, Canada, V6X 2P1
+                  <div className="pt-1.5 text-white/80 leading-relaxed hover:text-[#aa8b57] transition-colors">
+                    <a 
+                      href="https://www.google.com/maps/search/?api=1&query=Unit+1+-+2480+Shell+Rd,+Richmond,+British+Columbia,+Canada,+V6X+2P1" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Unit 1 - 2480 Shell Rd, Richmond, British Columbia, Canada, V6X 2P1
+                    </a>
                   </div>
                 </li>
               </ul>

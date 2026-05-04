@@ -1,0 +1,626 @@
+{
+  "hero": {
+    "title": "Designed with purpose",
+    "titleAccent": "Built with heart",
+    "subtitle": "Specializing in high-end residential and commercial design & construction with lasting value in Vancouver.",
+    "explore": "Explore Our Services",
+    "portfolio": "Our Portfolio"
+  },
+  "about": {
+    "title": "Company Introduction",
+    "subtitle": "With Artisan Spirits,",
+    "subtitleAccent": "We Realize Your Vision",
+    "p1": "Y&Y Design Build is a full-service firm based in Vancouver, specializing in residential and commercial design and renovations.",
+    "p2": "We offer a fully integrated process — from concept and planning to construction — to bring your vision to life with clarity, care, and craftsmanship.",
+    "feedback": "positive feedback",
+    "help": "need any help?",
+    "services": "Our Services"
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us",
+    "subtitle": "Provide",
+    "subtitleAccent": "comprehensive spatial solutions",
+    "description": "From concept to completion, discover how we bring your vision to life with innovation, collaboration, and expert craftsmanship.",
+    "years": "Years of Building Excellence",
+    "features": [
+      {
+        "title": "Integrated Service:",
+        "description": "Seamless collaboration between design and construction for smoother communication."
+      },
+      {
+        "title": "Experienced Team:",
+        "description": "Professionals with deep expertise in residential and commercial renovations."
+      },
+      {
+        "title": "Transparent Process:",
+        "description": "Detailed budgeting and timelines, with no hidden fees."
+      },
+      {
+        "title": "Client-Centered:",
+        "description": "Bilingual service (English & Chinese) with fast response and clear communication."
+      }
+    ]
+  },
+  "sidebar": {
+    "servicesTitle": "Services",
+    "cta": {
+      "title": "how can we help",
+      "description": "If you need any helps, please feel free to contact us."
+    }
+  },
+  "services": {
+    "title": "our services",
+    "subtitle": "Innovative design services for",
+    "subtitleAccent": "every need",
+    "description": "We offer a range of bespoke interior design services tailored to your unique needs. From concept development to final installation.",
+    "learnMore": "Learn More",
+    "items": [
+      {
+        "title": "Residential Design & Renovation",
+        "description": "Custom design and renovation for houses, apartments, and townhomes. Kitchen and bathroom Design & Renovation."
+      },
+      {
+        "title": "Commercial Design & Renovation",
+        "description": "Full-service design / renovation & management for restaurants, offices, and retail spaces."
+      },
+      {
+        "title": "Design Drawings & City Approvals",
+        "description": "Full sets of architectural and interior construction drawings. Assistance with permit applications."
+      },
+      {
+        "title": "Project Management",
+        "description": "Project scheduling and progress monitoring. Budget planning and material procurement."
+      },
+      {
+        "title": "Tear-down & Rebuild",
+        "description": "Demolition of outdated properties and full-scale rebuild. Architectural planning and permitting."
+      }
+    ]
+  },
+  "howWeWork": {
+    "title": "how we work",
+    "subtitle": "From concept to completion in",
+    "subtitleAccent": "our work",
+    "description": "Our comprehensive approach guides you through each phase of the design process.",
+    "steps": [
+      {
+        "title": "initial consultation",
+        "description": "We start with a one-on meeting to understand your vision preferences and requirement."
+      },
+      {
+        "title": "design planning",
+        "description": "This involves selecting materials, and layouts, furnishings, as well as creating 3D renderings."
+      },
+      {
+        "title": "project execution",
+        "description": "With the design plans in this place, we manage and coordinate all aspects of the projects."
+      },
+      {
+        "title": "final review",
+        "description": "After completing project we conduct a thorough walkthrough with you to review the space."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Creative projects that define",
+    "subtitleAccent": "our style",
+    "description": "Our portfolio showcases a diverse range of projects, from residential spaces to commercial interiors.",
+    "viewAll": "View All Projects"
+  },
+  "blogs": {
+    "header": {
+      "title": "Blog",
+      "breadcrumb": ["Home", "Blog"]
+    },
+    "readMore": "Read More",
+    "posts": [
+      {
+        "id": 1,
+        "category": "Renovation",
+        "date": "April 05, 2026",
+        "title": "Top 10 Kitchen Trends for 2026",
+        "excerpt": "Discover the latest kitchen design trends that combine functionality with modern aesthetics. From smart appliances to sustainable materials...",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-4.jpg"
+      },
+      {
+        "id": 2,
+        "category": "Design",
+        "date": "March 28, 2026",
+        "title": "Maximizing Space in Small Apartments",
+        "excerpt": "Living in a compact urban space doesn't mean sacrificing comfort. Learn how professional space planning can transform your home...",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg"
+      },
+      {
+        "id": 3,
+        "category": "Commercial",
+        "date": "March 15, 2026",
+        "title": "How Office Design Impacts Productivity",
+        "excerpt": "The environment you work in affects your mental well-being and output. We explore the elements of high-performance office interiors...",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg"
+      }
+    ]
+  },
+  "residential": {
+    "header": {
+      "title": "Residential Design & Renovation",
+      "breadcrumb": ["Home", "Services", "Residential Design & Renovation"]
+    },
+    "intro": {
+      "p1": "We specialize in tailored design and renovation services for apartments, single-family homes, condominiums, and townhouses, transforming everyday spaces into personalized havens. Our expertise spans comprehensive kitchen and bathroom upgrades, including custom cabinetry, premium countertops, appliance integration, and enhanced lighting and ventilation.",
+      "p2": "We also handle structural modifications such as wall removal or addition, staircase redesign, and door/window repositioning to improve flow and functionality. With a focus on space optimization, we reimagine layouts, create multi-functional zones, and implement smart storage solutions. Whether you're looking to modernize your interiors or expand usable space, our team combines design innovation with construction excellence to deliver results that elevate your lifestyle."
+    },
+    "sections": [
+      {
+        "title": "Kitchen & Bathroom Upgrades",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "Custom design or replacement of cabinetry",
+          "Countertop upgrades – quartz, marble, porcelain slab, etc.",
+          "Sink, faucet, and hardware replacement",
+          "Appliance installation and space optimization",
+          "Vanity, mirror cabinet, and storage upgrades",
+          "Walk-in Shower/tub replacement and waterproofing",
+          "Lighting, ventilation, and heating improvements"
+        ]
+      },
+      {
+        "title": "Structural Modifications",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "Wall removal or addition",
+          "Structural reinforcement",
+          "Door/window relocation or resizing",
+          "New staircase installation or modification",
+          "Interior additions or extensions"
+        ]
+      },
+      {
+        "title": "Space Optimization",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-4.jpg",
+        "items": [
+          "Re-planning floor layouts",
+          "Custom storage solutions",
+          "Multi-functional space design – study, guest room, home office",
+          "Open-plan and enclosed space conversions",
+          "Traffic flow and natural lighting optimization",
+          "Acoustic and soundproofing enhancements"
+        ]
+      }
+    ],
+    "sidebar": {
+      "servicesTitle": "Services",
+      "cta": {
+        "title": "how can we help",
+        "description": "If you need any helps, please feel free to contact us."
+      }
+    }
+  },
+  "commercial": {
+    "header": {
+      "title": "Commercial Design & Renovation",
+      "breadcrumb": ["Home", "Services", "Commercial Design & Renovation"]
+    },
+    "intro": {
+      "p1": "Y&Y Construction specializes in providing comprehensive renovation services for commercial spaces such as offices, restaurants, and schools. We are committed to tailoring solutions for each project to ensure that every detail meets our clients' expectations.",
+      "p2": "With a strong reputation across Vancouver, Burnaby, Richmond, Surrey, and surrounding areas, our services include but are not limited to:"
+    },
+    "sections": [
+      {
+        "title": "Office Renovation",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "Full management from concept design to completion, strictly controlling timeline, budget, and quality standards.",
+          "Design teams creating environments that balance aesthetics and function, reflecting brand identity and optimizing space efficiency.",
+          "Professional teams handling partitions, flooring, ceilings, and finishing works.",
+          "Ergonomic custom office furniture solutions based on layout and employee needs.",
+          "Sustainable materials and energy-saving systems to support green building certifications."
+        ]
+      },
+      {
+        "title": "Restaurant Renovation",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "Immersive dining spaces designed to reflect brand DNA and enhance customer experience.",
+          "Optimized kitchen workflows, collaborating with chefs and suppliers for equipment placement 100% compliant with health codes.",
+          "Layered lighting design for specific atmospheres, from casual cafes to high-end restaurants.",
+          "Custom booths, bars, and display units integrating functionality and art.",
+          "Assistance with building permits, fire inspections, and health licenses for a compliant opening."
+        ]
+      },
+      {
+        "title": "School Renovation",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "Tailored classrooms, libraries, and public areas for different age groups, focusing on engagement and safety.",
+          "Modular teaching environments supporting both traditional lectures and collaborative learning models.",
+          "Specialized areas like science labs, maker spaces, and art studios to inspire innovation.",
+          "Highly durable, low-maintenance materials that withstand high traffic while staying clean and professional.",
+          "Compliance with fire codes, ADA standards, and child safety regulations."
+        ]
+      },
+      {
+        "title": "Retail Store Renovation",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "Store designs that reflect brand identity and boost customer retention through immersive shopping experiences.",
+          "Innovative shelving and display fixtures combined with traffic flow planning to maximize exposure.",
+          "Premium, wear-resistant materials ensuring the store remains pristine over time.",
+          "Functional checkout layouts integrated with smart payment systems for better transaction efficiency.",
+          "100% compliance with fire codes, accessibility standards, and commercial safety regulations."
+        ]
+      },
+      {
+        "title": "Central Kitchen & Showroom",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "Functional zoning for central kitchens (prep/cooking/cleaning separation) compliant with hygiene regulations.",
+          "Heat-resistant, anti-bacterial stainless steel materials for food safety.",
+          "Narrative-driven showroom spaces for immersive brand storytelling.",
+          "Integrated systems: plumbing, electrical, and high-capacity ventilation.",
+          "Compliance with fire, food safety, and restaurant building standards."
+        ]
+      }
+    ]
+  },
+  "cityApprovals": {
+    "header": {
+      "title": "Design Drawings & City Approvals",
+      "breadcrumb": ["Home", "Services", "Design Drawings & City Approvals"]
+    },
+    "intro": {
+      "p1": "We offer comprehensive architectural and interior construction drawing services for both residential and commercial projects, covering everything from floor plans and elevations to structural, electrical, and material specifications. Our detailed drawings include cabinetry, stairs, doors, windows, and decorative elements, ensuring seamless coordination between fabrication and on-site execution.",
+      "p2": "In addition, we provide end-to-end support for building permit applications, change-of-use submissions, and city approval processes. Whether you're planning a new build, renovation, or structural modification, we prepare and review all necessary documentation to meet local codes and zoning bylaws. Our team handles municipal submissions, follows up on approval progress, and communicates directly with city departments to resolve inquiries."
+    },
+    "sections": [
+      {
+        "title": "Architectural & Interior Construction Drawings",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "description": "We provide a full set of professional construction drawing services for both residential and commercial projects, including:",
+        "items": [
+          "Floor Plans – Indicating walls, doors, windows, furniture, and circulation flow.",
+          "Elevations – Showcasing heights, proportions, and decorative details.",
+          "Sections – Illustrating structural layers, spatial relationships, and internal assemblies.",
+          "Detail Drawings – Specifics for cabinetry, stairs, doors, windows, and trims.",
+          "Structural Drawings – Dimensions and construction details for beams, columns, slabs, and foundations.",
+          "Electrical Plans – Layouts for outlets, lighting, switches, and low-voltage systems.",
+          "Material & Finish Schedules – Specifications, color codes, and installation methods.",
+          "Millwork & Shop Drawings – For fabrication and precise on-site coordination."
+        ]
+      },
+      {
+        "title": "Building Permits & City Approvals Assistance",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "description": "We provide one-stop service from application to approval for residential and commercial projects, ensuring compliance and smooth execution, including:",
+        "items": [
+          "Preparation and review of all necessary architectural and engineering documents.",
+          "Submission of building permit and change-of-use applications to local municipalities.",
+          "Coordination with city planners, inspectors, and relevant departments.",
+          "Resolving zoning bylaws inquiries and providing supplemental materials.",
+          "Assistance with revision applications during the construction phase.",
+          "Guidance through each stage of the approval timeline for a smooth transition to groundbreaking."
+        ]
+      }
+    ],
+    "sidebar": {
+      "servicesTitle": "Services",
+      "cta": {
+        "title": "how can we help",
+        "description": "If you need any helps, please feel free to contact us."
+      }
+    }
+  },
+  "projectManagement": {
+    "header": {
+      "title": "Project Management",
+      "breadcrumb": ["Home", "Services", "Project Management"]
+    },
+    "intro": {
+      "p1": "Y & Y Construction provides comprehensive commercial general contracting services, focusing on offering one-stop solutions for various commercial projects in Vancouver and surrounding cities. We turn your vision into reality with professional support and high-quality services.",
+      "p2": "Our project management services cover the following key aspects:"
+    },
+    "sections": [
+      {
+        "title": "Project Planning and Management",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "Full-service from initial project planning to construction management.",
+          "Close collaboration to understand your needs and vision.",
+          "Detailed planning and construction plans.",
+          "Monitoring progress, coordinating resources, ensuring on-time, high-quality completion."
+        ]
+      },
+      {
+        "title": "Consultation and Construction",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "Experienced construction team providing professional advice for commercial spaces.",
+          "Ensuring every detail meets high standards of craftsmanship.",
+          "Building commercial spaces that are both beautiful and functional."
+        ]
+      },
+      {
+        "title": "Infrastructure Development",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "Comprehensive infrastructure services including plumbing, electrical, HVAC, and gas systems.",
+          "Ensuring safety and compliance with industry standards for seamless operations."
+        ]
+      }
+    ]
+  },
+  "aboutUs": {
+    "header": {
+      "title": "About Us",
+      "breadcrumb": ["Home", "About Us"]
+    },
+    "sectionTitle": "About Y&Y Design Build",
+    "slogan": "Your Vision, Our Mission",
+    "sloganAccent": "- Do it!",
+    "paragraphs": [
+      "Y&Y Design Build is a Vancouver-based full-service design and construction firm, specializing in both commercial and residential renovations. With over a decade of local industry experience and a team of more than 30 full-time professionals, we deliver comprehensive, one-stop solutions from concept to completion.",
+      "As a licensed general contractor with an in-house design team, we understand the importance of balancing aesthetics with functional layout. Our designers and builders work closely together to ensure every project is executed true to the original vision\u2014this is the essence of our motto: \"Your Vision, Our Mission - Do it!\"",
+      "Over the past ten years, we have successfully delivered hundreds of projects across Greater Vancouver, spanning restaurants, retail stores, office spaces, and residential properties.",
+      "Our full-service offering covers design, permitting, plumbing, electrical, HVAC, gas, kitchen and bathroom construction, custom millwork, and soft furnishing. We focus on timely delivery and quality workmanship, ensuring your space is ready for business or move-in as planned. We also provide comprehensive warranty and post-project support for peace of mind.",
+      "At Y&Y, we don't just build spaces - we bring your vision to life. Get in touch with us to start your transformation."
+    ],
+    "clientsTitle": "Some of our past clients include:",
+    "clients": [
+      "Big Way Hot Pot",
+      "Myth Szechuan Cuisine",
+      "Tasty BBQ & Beer Bar",
+      "Hikvision Vancouver Office",
+      "Gyubee Japanese Grill",
+      "Myth Grill & Yakitori Bistro",
+      "Datang Hot Pot",
+      "Oldxiansfood Noodle&Mart",
+      "Kinton Ramen",
+      "Steven's Poke Bar"
+    ],
+    "facilities": [
+      {
+        "title": "Reasonable Prices",
+        "description": "We guarantee transparent pricing, clear quotes and timelines, and our prices are below the market average.",
+        "icon": "facility-1"
+      },
+      {
+        "title": "Exclusive Design",
+        "description": "Mixture of imagination, experience and professionalism is the secret of our design!",
+        "icon": "facility-2"
+      },
+      {
+        "title": "Professional Team",
+        "description": "We are proud of our amicable, professional and always developing team!",
+        "icon": "facility-2"
+      }
+    ],
+    "visionMission": {
+      "sectionTitle": "Vision Mission",
+      "sectionSubtitle": "A behind the scenes look at",
+      "sectionSubtitleAccent": "our agency",
+      "sectionDescription": "Our portfolio showcases a diverse range of projects, from beautifully crafted residential spaces to functional and stylish commercial interiors.",
+      "vision": {
+        "title": "Our Vision",
+        "description": "We believe that well-designed spaces have the power to transform lives - shaping how people feel, work, and connect. Our vision is to create interiors that authentically reflect each client's individuality, seamlessly blending comfort, function, and beauty. By marrying timeless aesthetics with modern innovation, we design environments that are both visually striking and deeply practical."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "description": "Our mission is to create exceptional interior designs that elevate everyday living by prioritizing comfort, functionality, and aesthetics. We strive to craft spaces that are not only visually captivating but also thoughtfully tailored to each client's unique needs and lifestyle. Through a commitment to design innovation, we ensure every project strikes the ideal balance between style and purpose."
+      }
+    }
+  },
+  "faq": {
+    "header": {
+      "title": "FAQ",
+      "breadcrumb": ["Home", "Frequently Asked Questions"]
+    },
+    "questions": [
+      {
+        "q": "What types of commercial renovations do you provide?",
+        "a": "We offer renovation services for offices, restaurants, schools, retail spaces, central kitchens, and showrooms. Our scope includes design, construction, infrastructure upgrades, and interior finishes."
+      },
+      {
+        "q": "Which areas do you serve?",
+        "a": "We primarily serve Vancouver, Burnaby, Richmond, Surrey, and surrounding cities in the Lower Mainland."
+      },
+      {
+        "q": "How long do your projects typically take?",
+        "a": "Timelines depend on project scope and complexity. We always provide a detailed schedule before starting and commit to delivering on time without compromising quality."
+      },
+      {
+        "q": "How do you ensure construction quality?",
+        "a": "Our experienced team follows strict quality control protocols, uses premium materials, and adheres to industry best practices. We also offer comprehensive warranty support."
+      },
+      {
+        "q": "How is your pricing structured?",
+        "a": "Our pricing is based on project scale, complexity, and specific requirements. A detailed quote is provided before the project begins to ensure full transparency."
+      },
+      {
+        "q": "Do you provide design services?",
+        "a": "Yes. Our dedicated in-house design team creates tailored solutions based on your vision, functionality needs, and aesthetic preferences."
+      },
+      {
+        "q": "Do you offer post-construction support?",
+        "a": "Absolutely. We provide full after-sales service including warranty coverage and continued technical support beyond project handover."
+      },
+      {
+        "q": "What kinds of infrastructure work do you handle?",
+        "a": "We provide plumbing, electrical, HVAC, and gas system installation and upgrades to ensure your space is fully operational and up to code."
+      },
+      {
+        "q": "How do I start working with Y&Y Construction?",
+        "a": "Simply contact us via phone, email, or our website. We'll arrange an initial consultation to understand your goals and prepare a project plan and quote."
+      },
+      {
+        "q": "Do you have examples of completed projects?",
+        "a": "Yes. Notable completed projects include Big Way Hot Pot, Myth Szechuan Cuisine, Tasty BBQ & Beer Bar, Hikvision Vancouver Office, Real Fruit Bubble Tea, and Happy Lamb Hotpot."
+      }
+    ]
+  },
+  "joinUs": {
+    "header": {
+      "title": "Join Us",
+      "breadcrumb": ["Home", "Join Us"]
+    },
+    "form": {
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "email": "Email *",
+      "phone": "Phone *",
+      "positionDefault": "Please select the position you want to apply",
+      "positions": [
+        { "value": "interior-designer", "label": "Interior Designer" },
+        { "value": "pm-assistant", "label": "PM Assistant" },
+        { "value": "site-supervisor", "label": "Site Supervisor" }
+      ],
+      "message": "Message *",
+      "resume": "Resume",
+      "resumeHint": "Click to upload (PDF only, max 25MB)",
+      "browseFile": "Browse file",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "successMessage": "Your application has been submitted successfully!",
+      "errorMessage": "Something went wrong. Please try again."
+    },
+    "contact": {
+      "phone": { "label": "Phone", "value": "+1 (604) 349-9888" },
+      "email": { "label": "Email", "value": "info@yyconstruction.ca" },
+      "address": { "label": "Address", "value": "Unit 1 - 2480 Shell Rd, Richmond, British Columbia, Canada, V6X 2P1" },
+      "wechat": { "label": "Wechat" }
+    }
+  },
+  "ourTeam": {
+    "header": {
+      "title": "Our Team",
+      "breadcrumb": ["Home", "Our Team"]
+    },
+    "sectionTitle": "Our Team",
+    "subtitle": "Creative minds always",
+    "subtitleAccent": "think something",
+    "description": "We offer a range of bespoke interior design services tailored to your unique needs. From concept development to final installation.",
+    "groups": [
+      {
+        "name": "Executive Team",
+        "members": [
+          { "name": "Rong Yu", "title": "Director", "image": "team/Rong_Yu.jpg" },
+          { "name": "Andy Zhou", "title": "Vice President", "image": "team/Andy_Zhou.jpg" },
+          { "name": "Langsha Tao", "title": "Operation Manager", "image": "team/Langsha_Tao.jpg" }
+        ]
+      },
+      {
+        "name": "Design Team",
+        "members": [
+          { "name": "Alex Mai", "title": "Design Director", "image": "team/Alex_Mai.jpg" },
+          { "name": "Kasey", "title": "Designer", "image": "team/Kasey.jpg" },
+          { "name": "Queenie Wang", "title": "Design Director", "image": "team/Queenie_Wang.jpg" }
+        ]
+      },
+      {
+        "name": "Project Management Team",
+        "members": [
+          { "name": "Jackie Lu", "title": "Project Manager", "image": "team/Jackie_Ru.jpg" },
+          { "name": "Ronald Zhang", "title": "Project Manager", "image": "team/Ronald_Zhang.jpg" },
+          { "name": "Rachel Ruan", "title": "Project Manager", "image": "team/Rachel_Ruan.jpg" },
+          { "name": "Anthony Chung", "title": "Coordinator", "image": "team/Anthony_Chung.jpg" },
+          { "name": "Steven Zhang", "title": "Project Manager Assistant", "image": "team/Steven_Zhang.jpg" },
+          { "name": "Dylan Zhu", "title": "Project Manager Assistant", "image": "team/Dylan_Zhu.jpg" }
+        ]
+      }
+    ]
+  },
+  "tearDownRebuild": {
+    "header": {
+      "title": "Tear-down & Rebuild",
+      "breadcrumb": ["Home", "Services", "Tear-down & Rebuild"]
+    },
+    "intro": {
+      "p1": "Our Tear-down & Rebuild service offers a complete transformation of outdated properties into modern, high-performance homes or investment assets. From demolition and site preparation to architectural planning and full-scale construction, we manage every step.",
+      "p2": "Whether you're rebuilding your dream home or developing for resale, our team ensures seamless permitting, structural optimization, and tailored design."
+    },
+    "sections": [
+      {
+        "title": "Demolition & Site Preparation",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "Coordinating utility disconnection and relocation.",
+          "Handling hazardous materials responsibly under strict safety protocols.",
+          "Soil assessment and foundation preparation for optimal stability.",
+          "Erosion control and drainage planning for long-term durability."
+        ]
+      },
+      {
+        "title": "Architectural Planning & Design",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "Collaboration with engineers and consultants for code compliance.",
+          "Designs that balance beauty with practicality and function.",
+          "3D renderings and walkthroughs to help visualize your future space.",
+          "Tailoring plans to local zoning and environmental requirements."
+        ]
+      },
+      {
+        "title": "Permitting & Regulatory Approvals",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-4.jpg",
+        "items": [
+          "Efficient handling of complex municipal approval processes.",
+          "Assistance with variance or change-of-use applications.",
+          "Staying updated on local regulations to ensure project continuity.",
+          "Direct communication with city departments to resolve inquiries."
+        ]
+      }
+    ]
+  },
+  "portfolioPage": {
+    "header": {
+      "title": "Our Portfolio",
+      "breadcrumb": ["Home", "Portfolio"]
+    },
+    "filters": {
+      "all": "All",
+      "commercial": "Commercial",
+      "residential": "Residential"
+    },
+    "projectCount": "Projects",
+    "detail": {
+      "projectType": "Project Type",
+      "location": "Location",
+      "year": "Year",
+      "description": "Description",
+      "commercial": "Commercial",
+      "residential": "Residential",
+      "gallery": "Project Gallery",
+      "ctaTitle": "Start Your Project",
+      "ctaDescription": "Ready to transform your space? Contact us for a free consultation.",
+      "ctaButton": "Contact Us",
+      "backToPortfolio": "Back to Portfolio",
+      "relatedProjects": "Related Projects"
+    }
+  },
+  "contactUs": {
+    "header": {
+      "title": "Contact Us",
+      "breadcrumb": ["Home", "Contact Us"]
+    },
+    "sectionTitle": "Contact Us",
+    "sectionSubtitle": "Free Consultation",
+    "sectionDescription": "We are happy to assist with any inquiries regarding your renovation needs and provide a free quotation. We typically respond within 2-3 business days, and we look forward to contacting you soon.",
+    "info": {
+      "phone": { "label": "Phone", "value": "+1 (604) 349-9888" },
+      "email": { "label": "Email", "value": "info@yyconstruction.ca" },
+      "address": { "label": "Address", "value": "Unit 1 - 2480 Shell Rd, Richmond, BC, Canada, V6X 2P1" }
+    },
+    "form": {
+      "title": "Get In Touch",
+      "subtitle": "We would love to hear from you.",
+      "note": "Your email address will not be published. Required fields are marked *.",
+      "name": "Name*",
+      "email": "Email*",
+      "phone": "Phone*",
+      "message": "Message*",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "successMessage": "Message sent successfully! We will get back to you soon.",
+      "errorMessage": "Something went wrong. Please try again."
+    }
+  }
+}

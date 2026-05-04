@@ -4,7 +4,20 @@ import Image from 'next/image';
 import SectionHeader from '@/components/ui/SectionHeader';
 import AnimatedButton from '@/components/ui/AnimatedButton';
 
-const AboutUs = () => {
+interface AboutUsProps {
+  dict: {
+    title: string;
+    subtitle: string;
+    subtitleAccent: string;
+    p1: string;
+    p2: string;
+    feedback: string;
+    help: string;
+    services: string;
+  };
+}
+
+const AboutUs = ({ dict }: AboutUsProps) => {
   return (
     <section 
       className="py-[50px] bg-white text-[#192324] relative z-20 bg-no-repeat bg-[url('/images/section-bg-shape-1.svg')] bg-[position:left_center] bg-contain" 
@@ -16,21 +29,13 @@ const AboutUs = () => {
           <div className="xl:pl-8 order-1 xl:order-2">
             {/* Section Header */}
             <SectionHeader 
-              title="Company Introduction"
-              subtitle={<>With Artisan Spirits,<br /> <span className="text-[#aa8b57]">We Realize Your Vision</span></>}
+              title={dict.title}
+              subtitle={<>{dict.subtitle}<br /> <span className="text-[#aa8b57]">{dict.subtitleAccent}</span></>}
             />
             
             <div className="space-y-4 text-[#283132] text-base md:text-lg leading-[1.7em] -mt-4 mb-10">
-              <p>
-                Y&Y Design Build is a full-service firm based in Vancouver,
-                specializing in residential and commercial design and
-                renovations.
-              </p>
-              <p>
-                We offer a fully integrated process — from concept and
-                planning to construction — to bring your vision to life with
-                clarity, care, and craftsmanship.
-              </p>
+              <p>{dict.p1}</p>
+              <p>{dict.p2}</p>
             </div>
 
             {/* Content Body */}
@@ -65,7 +70,7 @@ const AboutUs = () => {
                   <div className="flex justify-start">
                     <AnimatedButton 
                       href="/services" 
-                      text="Our Services" 
+                      text={dict.services} 
                       variant="primary"
                     />
                   </div>
@@ -79,7 +84,7 @@ const AboutUs = () => {
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 512 512"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[#283132] text-xs font-semibold uppercase tracking-widest mb-1 opacity-80">need any help?</p>
+                      <p className="text-[#283132] text-xs font-semibold uppercase tracking-widest mb-1 opacity-80">{dict.help}</p>
                       <h3 className="text-base md:text-lg font-bold text-[#192324]">
                         <a href="tel:+1(604)349-9888">+1 (604) 349-9888</a>
                       </h3>
@@ -150,7 +155,7 @@ const AboutUs = () => {
                 <h3 className="text-lg sm:text-2xl md:text-3xl xl:text-[34px] font-bold mb-0 xl:mb-1 leading-none text-center w-full">
                   <span className="counter">100</span>%
                 </h3>
-                <p className="text-[7px] sm:text-[10px] md:text-xs xl:text-[16px] font-semibold leading-[1.4em] capitalize text-center w-full px-2">positive feedback</p>
+                <p className="text-[7px] sm:text-[10px] md:text-xs xl:text-[16px] font-semibold leading-[1.4em] capitalize text-center w-full px-2">{dict.feedback}</p>
               </div>
             </div>
           </div>

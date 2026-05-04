@@ -37,6 +37,26 @@ const Navbar = () => {
     setActiveDropdown(null);
   }, [pathname]);
 
+  // Determine current language from pathname
+  const currentLang = pathname.startsWith('/zh') ? 'zh' : 'en';
+
+  // Helper to generate the correct localized path for navigation links
+  const getLocalizedPath = (path: string, targetLang: string) => {
+    if (path === '/' || path === '#') {
+      return path === '#' ? '#' : `/${targetLang}`;
+    }
+    return `/${targetLang}${path.startsWith('/') ? path : `/${path}`}`;
+  };
+
+  // Helper to generate the exact path for language switching
+  // It removes the current language prefix and prepends the new one
+  const getSwitchLangPath = (targetLang: string) => {
+    if (!pathname) return `/${targetLang}`;
+    const pathWithoutLang = pathname.replace(/^\/(en|zh)(\/|$)/, '/');
+    if (pathWithoutLang === '/') return `/${targetLang}`;
+    return `/${targetLang}${pathWithoutLang.startsWith('/') ? pathWithoutLang : `/${pathWithoutLang}`}`;
+  };
+
   const navLinks = [
     { name: 'Home', href: '/' },
     { 
@@ -45,11 +65,11 @@ const Navbar = () => {
       dropdownWidth: 'min-w-[350px]',
       dropdownPosition: '-left-12',
       dropdown: [
-        { name: 'Residential Design & Renovation', href: '/residential-design-renovation' },
-        { name: 'Commercial Design & Renovation', href: '/commercial-design-renovation' },
-        { name: 'Design Drawings & City Approvals', href: '/design-drawings-city-approvals' },
-        { name: 'Project Management', href: '/project-management' },
-        { name: 'Tear-down & Rebuild', href: '/tear-down-rebuild' },
+        { name: 'Residential Design & Renovation', href: '/services/residential-design-renovation' },
+        { name: 'Commercial Design & Renovation', href: '/services/commercial-design-renovation' },
+        { name: 'Design Drawings & City Approvals', href: '/services/design-drawings-city-approvals' },
+        { name: 'Project Management', href: '/services/project-management' },
+        { name: 'Tear-down & Rebuild', href: '/services/tear-down-rebuild' },
       ]
     },
     { name: 'Portfolio', href: '/portfolio' },
@@ -69,8 +89,8 @@ const Navbar = () => {
   ];
 
   const languages = [
-    { name: 'English', code: 'en', flag: 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/languages/en.png', href: '/' },
-    { name: '简体中文', code: 'zh', flag: 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/languages/zh.png', href: '/zh' },
+    { name: 'English', code: 'en', flag: 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/languages/en.png' },
+    { name: '简体中文', code: 'zh', flag: 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/languages/zh.png' },
   ];
 
   return (
@@ -78,7 +98,7 @@ const Navbar = () => {
       <nav className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${isScrolled ? 'bg-[#192324]/80 backdrop-blur-lg py-3 lg:py-4 border-b border-white/10 shadow-xl' : 'bg-transparent py-5 lg:py-7'}`}>
         <div className="container mx-auto px-4 lg:px-6 flex items-center justify-between flex-nowrap">
           {/* Logo */}
-          <Link href="/" className="relative transition-transform hover:scale-105 duration-300 shrink-0">
+          <Link href={`/${currentLang}`} className="relative transition-transform hover:scale-105 duration-300 shrink-0">
             <Image 
               src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/yy-logo.png" 
               alt="Y & Y Construction Logo" 
@@ -109,7 +129,7 @@ const Navbar = () => {
                         {link.dropdown.map((sub) => (
                           <Link 
                             key={sub.name} 
-                            href={sub.href} 
+                            href={getLocalizedPath(sub.href, currentLang)} 
                             className="block px-6 py-3 text-[#F1D19D] hover:bg-[#aa8b57] hover:text-white transition-all text-[16px] border-b border-white/5 last:border-0 whitespace-nowrap"
                           >
                             {sub.name}
@@ -120,8 +140,8 @@ const Navbar = () => {
                   </>
                 ) : (
                   <Link 
-                    href={link.href} 
-                    className={`text-[#F1D19D] hover:text-[#aa8b57] transition-colors text-[15px] xl:text-[18px] font-medium py-2 whitespace-nowrap ${pathname === link.href ? 'text-[#aa8b57]' : ''}`}
+                    href={getLocalizedPath(link.href, currentLang)} 
+                    className={`text-[#F1D19D] hover:text-[#aa8b57] transition-colors text-[15px] xl:text-[18px] font-medium py-2 whitespace-nowrap ${pathname === getLocalizedPath(link.href, currentLang) ? 'text-[#aa8b57]' : ''}`}
                   >
                     {link.name}
                   </Link>
@@ -136,8 +156,8 @@ const Navbar = () => {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button className="flex items-center text-[#F1D19D] group-hover:text-[#aa8b57] transition-colors text-[14px] xl:text-[16px] py-2 border-l border-white/20 pl-4 xl:pl-6 whitespace-nowrap">
-                <img src={languages[0].flag} alt="English" className="w-4 h-3 xl:w-5 xl:h-3.5 mr-1.5 xl:mr-2 object-cover" />
-                <span>EN</span>
+                <img src={currentLang === 'zh' ? languages[1].flag : languages[0].flag} alt="Current Language" className="w-4 h-3 xl:w-5 xl:h-3.5 mr-1.5 xl:mr-2 object-cover" />
+                <span className="uppercase">{currentLang}</span>
                 <svg className="ml-1 w-3 h-3 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
               </button>
               <div className={`absolute top-full right-0 pt-2 transition-all duration-300 z-[100] ${activeDropdown === 'lang' ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
@@ -145,21 +165,21 @@ const Navbar = () => {
                   {languages.map((lang) => (
                     <Link 
                       key={lang.code} 
-                      href={lang.href} 
-                      className="flex items-center px-6 py-3 text-[#F1D19D] hover:bg-[#aa8b57] transition-all text-[15px]"
+                      href={getSwitchLangPath(lang.code)} 
+                      className={`flex items-center px-6 py-3 text-[#F1D19D] hover:bg-[#aa8b57] hover:text-white transition-all text-[15px] ${currentLang === lang.code ? 'bg-white/5' : ''}`}
                     >
-                      <img src={lang.flag} alt={lang.name} className="w-5 h-3.5 mr-3 object-cover" />
-                      {lang.name}
+                      <img src={lang.flag} alt={lang.name} className="w-5 h-3.5 mr-3 object-cover shadow-sm" />
+                      <span className="whitespace-nowrap">{lang.name}</span>
                     </Link>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Contact Button Desktop (Now inside the desktop menu flex container for better alignment) */}
+            {/* Contact Button Desktop */}
             <div className="ml-2 xl:ml-6 shrink-0">
               <Link 
-                href="/contact-us" 
+                href={getLocalizedPath("/contact-us", currentLang)} 
                 className="relative inline-flex items-center group bg-[#aa8b57] text-white px-4 xl:px-8 py-2.5 xl:py-3.5 overflow-hidden rounded-md transition-all duration-500 whitespace-nowrap"
               >
                 <span className="absolute left-0 w-0 h-full bg-[#192324] transition-all duration-500 group-hover:w-full"></span>
@@ -171,7 +191,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Toggler - Now hidden from lg breakpoint */}
+          {/* Mobile Toggler */}
           <button 
             className="lg:hidden flex flex-col items-center justify-center w-10 h-10 text-white focus:outline-none relative z-[10001]" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -209,13 +229,13 @@ const Navbar = () => {
                     <div className={`overflow-hidden transition-all duration-500 ${activeDropdown === link.name ? 'max-h-[500px] opacity-100 py-4' : 'max-h-0 opacity-0'}`}>
                       <div className="pl-4 flex flex-col space-y-5 border-l border-[#aa8b57]/30 ml-1">
                         {link.dropdown.map((sub) => (
-                          <Link key={sub.name} href={sub.href} className="text-white/80 hover:text-[#aa8b57] text-lg transition-colors">{sub.name}</Link>
+                          <Link key={sub.name} href={getLocalizedPath(sub.href, currentLang)} className="text-white/80 hover:text-[#aa8b57] text-lg transition-colors">{sub.name}</Link>
                         ))}
                       </div>
                     </div>
                   </>
                 ) : (
-                  <Link href={link.href} className="text-[#F1D19D] text-xl py-4 border-b border-white/10 uppercase tracking-wide font-medium hover:text-[#aa8b57] transition-colors">{link.name}</Link>
+                  <Link href={getLocalizedPath(link.href, currentLang)} className="text-[#F1D19D] text-xl py-4 border-b border-white/10 uppercase tracking-wide font-medium hover:text-[#aa8b57] transition-colors">{link.name}</Link>
                 )}
               </div>
             ))}
@@ -235,7 +255,7 @@ const Navbar = () => {
               {activeDropdown === 'lang' && (
                 <div className="pl-4 py-4 flex flex-col space-y-5 border-l border-[#aa8b57]/30 ml-1">
                   {languages.map((lang) => (
-                    <Link key={lang.code} href={lang.href} className="flex items-center text-white/80 hover:text-[#aa8b57] text-lg transition-colors">
+                    <Link key={lang.code} href={getSwitchLangPath(lang.code)} className="flex items-center text-white/80 hover:text-[#aa8b57] text-lg transition-colors">
                       <img src={lang.flag} alt={lang.name} className="w-5 h-3.5 mr-3 object-cover shadow-sm" />
                       {lang.name}
                     </Link>
@@ -246,7 +266,7 @@ const Navbar = () => {
           </div>
 
           <div className="mt-12 pb-10">
-            <Link href="/contact-us" className="flex items-center justify-center w-full bg-[#aa8b57] text-white py-4 font-bold uppercase tracking-widest hover:bg-[#8e744a] rounded-sm transition-all shadow-lg">
+            <Link href={getLocalizedPath("/contact-us", currentLang)} className="flex items-center justify-center w-full bg-[#aa8b57] text-white py-4 font-bold uppercase tracking-widest hover:bg-[#8e744a] rounded-sm transition-all shadow-lg">
               Contact Us
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
             </Link>

@@ -1,0 +1,625 @@
+{
+  "hero": {
+    "title": "匠心设计",
+    "titleAccent": "诚筑未来",
+    "subtitle": "温哥华高端住宅与商业空间设计施工专家，为您创造持久价值。",
+    "explore": "探索我们的服务",
+    "portfolio": "成功案例"
+  },
+  "about": {
+    "title": "公司简介",
+    "subtitle": "以匠心之魂，",
+    "subtitleAccent": "筑就理想蓝图",
+    "p1": "Y&Y建筑公司是一家总部位于温哥华的全方位服务公司，专注于住宅和商业设计及翻新。",
+    "p2": "我们提供从理念规划到施工落地的全集成流程，以清晰、细致和精湛的工艺为您实现理想空间。",
+    "feedback": "好评率",
+    "help": "需要帮助？",
+    "services": "我们的服务"
+  },
+  "whyChooseUs": {
+    "title": "为什么选择我们",
+    "subtitle": "提供",
+    "subtitleAccent": "全方位空间解决方案",
+    "description": "从构思到竣工，了解我们如何通过创新、协作 and 专业工艺将您的愿景变为现实。",
+    "years": "建筑行业卓越经验",
+    "features": [
+      {
+        "title": "一站式集成服务：",
+        "description": "设计与施工深度融合，确保沟通零障碍，项目推进更高效。"
+      },
+      {
+        "title": "资深专业团队：",
+        "description": "深耕温哥华住宅及商业翻新多年，拥有极其深厚的行业积淀。"
+      },
+      {
+        "title": "流程透明可控：",
+        "description": "严谨的预算规划与进度把控，杜绝任何隐形消费。"
+      },
+      {
+        "title": "以客户为中心：",
+        "description": "提供英汉双语服务，确保响应及时、沟通精准无误。"
+      }
+    ]
+  },
+  "sidebar": {
+    "servicesTitle": "我们的服务",
+    "cta": {
+      "title": "如何才能帮到您",
+      "description": "如有任何需求，敬请随时联系。"
+    }
+  },
+  "services": {
+    "title": "我们的服务",
+    "subtitle": "满足各类需求的",
+    "subtitleAccent": "创新设计服务",
+    "description": "我们提供一系列根据您的独特需求定制的室内设计服务. 从概念开发到最终安装。",
+    "learnMore": "了解更多",
+    "items": [
+      {
+        "title": "住宅设计与改造",
+        "description": "涵盖独立屋、公寓及城市屋的定制化设计与整体翻新，包括厨卫精装修。"
+      },
+      {
+        "title": "商业空间建设",
+        "description": "为餐厅、办公室及零售门店提供全方位的方案设计、空间规划及施工管理。"
+      },
+      {
+        "title": "设计图纸与政府报批",
+        "description": "绘制专业建筑与室内施工图，并全程协助办理各类许可证及政府审批流程。"
+      },
+      {
+        "title": "项目全流程管理",
+        "description": "精准把控工期进度、预算成本及材料采购，确保现场施工的高标准与高质量。"
+      },
+      {
+        "title": "推倒重建",
+        "description": "提供旧屋拆除、新房整体规划设计、结构方案优化等一站式重建服务。"
+      }
+    ]
+  },
+  "howWeWork": {
+    "title": "我们的流程",
+    "subtitle": "从想法到",
+    "subtitleAccent": "实现",
+    "description": "我们的综合方法引导您完成设计的每个阶段。",
+    "steps": [
+      {
+        "title": "深度需求洞察",
+        "description": "通过专业对话精准捕捉您的理想空间蓝图，理解您的愿景与需求。"
+      },
+      {
+        "title": "设计规划",
+        "description": "科学布局理想空间，精选材质并提供 3D 渲染效果，让设计全维度呈现。"
+      },
+      {
+        "title": "高标准施工落地",
+        "description": "将图纸精准转化为现实，全方位进行项目统筹管理，确保高标准执行。"
+      },
+      {
+        "title": "终审验收",
+        "description": "竣工交付，与您共同见证理想空间的完美呈现，完成最后的高品质验收。"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "成功案例",
+    "subtitle": "作品，",
+    "subtitleAccent": "是最好的名片",
+    "description": "我们的作品集涵盖多元项目类型，从精工打造的高端住宅，到功能与美学兼具的商业空间。",
+    "viewAll": "查看所有案例"
+  },
+  "blogs": {
+    "header": {
+      "title": "博客",
+      "breadcrumb": ["首页", "博客"]
+    },
+    "readMore": "阅读更多",
+    "posts": [
+      {
+        "id": 1,
+        "category": "装修",
+        "date": "2026年4月5日",
+        "title": "2026年十大厨房设计趋势",
+        "excerpt": "探索最新的厨房设计趋势，将功能性与现代美学完美结合。从智能家电到可持续材料……",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-4.jpg"
+      },
+      {
+        "id": 2,
+        "category": "设计",
+        "date": "2026年3月28日",
+        "title": "小户型空间最大化利用指南",
+        "excerpt": "住在紧凑的城市空间并不意味着要牺牲舒适度。了解专业空间规划如何改变您的家……",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg"
+      },
+      {
+        "id": 3,
+        "category": "商业",
+        "date": "2026年3月15日",
+        "title": "办公室设计如何影响工作效率",
+        "excerpt": "您所处的工作环境会影响心理健康和工作产出。我们探讨高效办公室内部设计的关键要素……",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg"
+      }
+    ]
+  },
+  "residential": {
+    "header": {
+      "title": "住宅设计与改造",
+      "breadcrumb": ["首页", "服务", "住宅设计与改造"]
+    },
+    "intro": {
+      "p1": "我们专注于为公寓、独立屋、共管公寓和联排别墅提供量身定制的设计和翻新服务，将日常空间转变为个性化的港湾。我们的专长涵盖全面的厨房和浴室升级，包括定制橱柜、优质台面、电器集成以及优化的照明 and 通风系统。",
+      "p2": "我们还处理结构改造，如拆除或增建墙体、重新设计楼梯以及调整门窗位置，以改善动线和功能性。我们注重空间优化，重新构想布局，创建多功能区域，并实施智能存储解决方案。无论您是希望实现室内现代化还是扩大可用空间，我们的团队都将设计创新与卓越施工相结合，提供提升您生活方式的成果。"
+    },
+    "sections": [
+      {
+        "title": "厨房与浴室升级",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "橱柜定制设计或更换",
+          "台面升级 – 石英、大理石、瓷板等",
+          "水槽、水龙头和五金件更换",
+          "电器安装和空间优化",
+          "浴室柜、镜柜和储物升级",
+          "步入式淋浴间/浴缸更换和防水",
+          "照明、通风和供暖改善"
+        ]
+      },
+      {
+        "title": "结构改造",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "拆除或增建墙体",
+          "结构加固",
+          "门/窗移位或改大",
+          "新楼梯安装或改造",
+          "室内增建或扩建"
+        ]
+      },
+      {
+        "title": "空间优化",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-4.jpg",
+        "items": [
+          "重新规划平面布局",
+          "定制储物解决方案",
+          "多功能空间设计 – 书房、客房、家庭办公室等",
+          "开放式和封闭式空间改造",
+          "优化动线和自然采光",
+          "隔音和消音升级"
+        ]
+      }
+    ],
+    "sidebar": {
+      "servicesTitle": "我们的服务",
+      "cta": {
+        "title": "如何才能帮到您",
+        "description": "如有任何需求，敬请随时联系。"
+      }
+    }
+  },
+  "commercial": {
+    "header": {
+      "title": "商业空间建设",
+      "breadcrumb": ["首页", "服务", "商业空间建设"]
+    },
+    "intro": {
+      "p1": "右岩建筑（Y&Y Construction）专注于为办公空间、餐厅、学校等商业场所提供全方位装修服务。我们致力于为每个项目量身定制解决方案，确保所有细节均符合客户预期。",
+      "p2": "我们在温哥华、本拿比、列治文、素里及周边城市积累了丰富经验与卓越口碑，服务范围包括但不限于："
+    },
+    "sections": [
+      {
+        "title": "办公室装修",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "从概念设计到工程竣工，我们全程管控办公空间改造的每个环节，严格把控工期、预算与质量标准。",
+          "设计师团队打造兼具视觉美感与实用功能的办公环境，精准传达品牌形象并优化空间效能。",
+          "专业施工团队负责隔断工程、地面铺装、吊顶施工及饰面处理等全流程作业。",
+          "根据空间布局与员工需求，提供符合人体工学的定制化办公家具解决方案。",
+          "采用环保建材与节能系统，助力达成绿色建筑认证要求。"
+        ]
+      },
+      {
+        "title": "餐厅装修",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "我们打造沉浸式餐饮空间，通过精细化设计传递品牌基因并提升顾客体验。",
+          "优化厨房动线布局，联合主厨与供应商确保设备高效配置，100%符合卫生防疫规范。",
+          "设计多层次照明系统，从休闲咖啡馆到高端餐厅，精准营造场景氛围。",
+          "定制卡座、吧台、陈列装置等商业家具，实现功能性与艺术性的有机融合。",
+          "代办建筑许可、消防验收及卫生许可证，确保餐厅合规开业。"
+        ]
+      },
+      {
+        "title": "学校装修",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "我们针对不同年龄段定制教室、图书馆及公共区域，提升学习参与度、安全性与教学效能。",
+          "打造模块化教学环境，同步支持传统授课与现代协作式学习模式。",
+          "规划设计科学实验室、创客空间及艺术工作室等专业区域，激发创新实践能力。",
+          "采用高耐用低维护的装饰材料，经得起高频使用考验，同时保持整洁专业的教学形象。",
+          "确保所有空间符合消防规范、无障碍设计标准（ADA）及儿童安全条例，构建全纳性安全环境。"
+        ]
+      },
+      {
+        "title": "零售店装修",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "我们打造彰显品牌DNA的零售空间，通过沉浸式购物体验提升客户复购率。",
+          "创新设计货架系统与陈列装置，结合动线规划最大化商品曝光度，刺激随机消费。",
+          "精选高颜值耐耗损材料，确保店铺历久弥新。",
+          "优化收银区域功能布局，集成智能支付系统，交易效率提升。",
+          "100%符合消防规范、无障碍标准及商业安全条例。"
+        ]
+      },
+      {
+        "title": "中央厨房和展厅装修",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "规划中央厨房功能分区（备餐/烹饪/清洁三区分离），符合卫生防疫规范。",
+          "选用耐高温、抗菌级不锈钢材质，保持食品接触安全。",
+          "打造产品叙事型展厅空间，实现品牌故事与实体展示的沉浸融合。",
+          "集成三大系统工程：给排水、强电系统、排风换气。",
+          "符合消防、食品规范及饮食建筑设计标准。"
+        ]
+      }
+    ]
+  },
+  "cityApprovals": {
+    "header": {
+      "title": "设计图纸与政府报批",
+      "breadcrumb": ["首页", "服务", "设计图纸与政府报批"]
+    },
+    "intro": {
+      "p1": "我们为住宅和商业项目提供全面的建筑和室内施工图服务，涵盖从平面图、立面图到结构、电气和材料规范的所有细节。我们细致的图纸包括橱柜、楼梯、门、窗户和装饰元素，确保制造和现场施工之间的无缝协调。",
+      "p2": "此外，我们还为建筑许可证申请、用途变更申请和市政审批流程提供端到端支持。无论您是计划新建、翻新还是结构修改，我们都会准备和审查所有必要的文件，以符合当地法规和分区附例。我们的团队负责市政提交、跟进审批进度，并与市政部门直接沟通，以解决疑问和提供补充材料。"
+    },
+    "sections": [
+      {
+        "title": "建筑和室内施工图",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "description": "我们为住宅和商业项目提供全套专业的施工图服务，包括：",
+        "items": [
+          "平面图 – 标注墙体、门、窗、家具和动线流向",
+          "立面图 – 展示高度、比例和装饰细节",
+          "剖面图 – 说明结构层次、空间关系和内部构造",
+          "详图 – 用于橱柜、楼梯、门、窗和装饰线条的细节",
+          "结构图 – 梁、柱、板和地基的尺寸和构造",
+          "电气图 – 插座、照明、开关和弱电系统的布局",
+          "材料与饰面表 – 材料规格、颜色代码和安装方法",
+          "加工图和木工图 – 用于制作和现场协调"
+        ]
+      },
+      {
+        "title": "协助办理建筑许可证、用途变更申请和市政审批",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "description": "我们为住宅和商业项目提供从申请到批准的一站式服务，确保合规和项目顺利实施，包括：",
+        "items": [
+          "准备和审查所有必要的建筑和工程文件",
+          "向当地市政当局提交建筑许可证和用途变更申请",
+          "与城市规划师、检查员及相关部门进行协调",
+          "解决分区附例（Zoning Bylaws）相关问询并提供补充材料",
+          "在施工阶段协助处理设计修改的申请审批",
+          "引导客户完成审批流程的每个阶段，确保顺利开工"
+        ]
+      }
+    ],
+    "sidebar": {
+      "servicesTitle": "我们的服务",
+      "cta": {
+        "title": "如何才能帮到您",
+        "description": "如有任何需求，敬请随时联系。"
+      }
+    }
+  },
+  "projectManagement": {
+    "header": {
+      "title": "项目全流程管理",
+      "breadcrumb": ["首页", "服务", "项目全流程管理"]
+    },
+    "intro": {
+      "p1": "右岩建筑（Y & Y Construction）提供全面的商业总承包服务，致力于为温哥华、本拿比、列治文、素里及周边城市的各类商业项目提供一站式解决方案。从办公室、餐厅、学校到零售店、中央厨房和展厅，我们旨在将您的商业愿景变为现实。无论是新建还是改造，我们都提供专业支持和高质量服务，确保您的商业空间脱颖而出。",
+      "p2": "我们的商业总承包服务涵盖以下方面："
+    },
+    "sections": [
+      {
+        "title": "项目规划与管理",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "从最初的项目规划到施工管理的全面服务。",
+          "紧密协作，了解您的需求和愿景。",
+          "详细的规划和施工方案。",
+          "监控进度、协调资源，确保项目按时、按预算、高质量完成。"
+        ]
+      },
+      {
+        "title": "咨询与施工",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "经验丰富的施工团队，为各类商业空间提供专业的建议和高标准的施工。",
+          "确保每一个细节都尽善尽美，打造兼具美观与实用性的商业空间。"
+        ]
+      },
+      {
+        "title": "基础设施建设",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "全面的基础设施服务，包括管道、电气、暖通空调、燃气系统的安装和改造。",
+          "工程师确保基础设施安全可靠，符合行业标准，以实现日常运营的无缝衔接。"
+        ]
+      }
+    ]
+  },
+  "aboutUs": {
+    "header": {
+      "title": "关于我们",
+      "breadcrumb": ["首页", "关于我们"]
+    },
+    "sectionTitle": "关于右岩建筑（Y&Y Design Build）",
+    "slogan": "Your Vision, Our Mission",
+    "sloganAccent": "- Do it！",
+    "paragraphs": [
+      "右岩建筑（Y&Y Design Build）是一家位于温哥华的全方位设计施工一体化公司，专注于商业与住宅空间的装修与改造。我们拥有十年以上的本地经验，团队由30余位全职专业人员组成，致力于为大温地区客户提供从概念设计到施工落地的一站式服务。",
+      "作为一家具备设计部门的承包公司，右岩建筑深知空间美学与功能布局同等重要。我们的设计团队与施工团队紧密协作，确保每一个项目从图纸到实景都精准还原客户的期待，做到真正的\"Your Vision, Our Mission — Do it！\"",
+      "在过去的十年中，我们已成功完成上百个项目，涵盖住宅、餐饮、办公、零售等多个领域的设计和装修。",
+      "我们提供全方位的总包服务，包括室内设计、政府审批、水电、暖通、瓦斯、厨房、卫生间、装饰面及软装定制，施工周期快，交付质量高，确保客户按期开业或入住。同时，我们承诺完善的售后保固服务，项目结束后也持续为客户提供支持。",
+      "在右岩建筑，我们不仅打造空间，更实现客户的理想蓝图。欢迎与我们联系，让我们一起把你的构想变成现实。"
+    ],
+    "clientsTitle": "部分代表作品包括：",
+    "clients": [
+      "大味麻辣烫（Big Way Hot Pot）",
+      "麻六川菜（Myth Szechuan Cuisine）",
+      "半步仙小酒馆（Ban Bu Xian Szechuan Cuisine Burnaby）",
+      "海康威视温哥华办公室（Hik Vision Vancouver Office）",
+      "云尚米线（Yunshang Rice Noodle）",
+      "牛兵卫烧肉（Gyubee Japanese Grill）",
+      "真果（Real Fruit Bubble Tea）",
+      "快乐小羊火锅（Happy Lamb Hotpot）",
+      "麻小馆（Myth Grill & Yakitori Bistro）",
+      "老西安面馆（Oldxiansfood Noodle&Mart）"
+    ],
+    "facilities": [
+      {
+        "title": "价格公道 · 预算透明",
+        "description": "我们不做最便宜，但保证明码标价，为客户提供透明的报价与时间表，单价低于市场均价。",
+        "icon": "facility-1"
+      },
+      {
+        "title": "独家定制设计",
+        "description": "想象、经验与专业的完美融合，铸就我们的设计奥秘！",
+        "icon": "facility-2"
+      },
+      {
+        "title": "专业团队，匠心打造",
+        "description": "我们引以为傲的团队：专业高效，永续精进！",
+        "icon": "facility-2"
+      }
+    ],
+    "visionMission": {
+      "sectionTitle": "愿景与使命",
+      "sectionSubtitle": "专业与匠心的真实呈现",
+      "sectionSubtitleAccent": "",
+      "sectionDescription": "我们的作品集展示了各种各样的项目，从精美的住宅空间到兼具功能性与时尚感的商业室内设计。",
+      "vision": {
+        "title": "我们的愿景：重塑空间价值，定义人居未来",
+        "description": "我们的愿景植根于这样一种信念：经过深思熟虑的空间设计可以改变生活，提升人们的感受、工作效率与交流方式。我们致力于打造能够体现客户独特个性的室内空间，在舒适性、功能性与美感之间取得平衡。通过将永恒的设计理念与现代创新相结合，我们创造出既赏心悦目又实用的空间。"
+      },
+      "mission": {
+        "title": "我们的使命：为每个客户创造独一无二的空间",
+        "description": "我们的使命是通过优先考虑舒适性、功能性与美感，打造卓越的室内设计，提升生活品质。我们致力于创造既具视觉吸引力，又能满足客户特定需求与愿望的空间。秉持设计创新的原则，我们确保每一个项目都展现出风格与实用性的完美平衡。"
+      }
+    }
+  },
+  "faq": {
+    "header": {
+      "title": "常见问题",
+      "breadcrumb": ["首页", "常见问题"]
+    },
+    "questions": [
+      {
+        "q": "你们提供哪些类型的商业装修改造服务？",
+        "a": "我们提供包括办公室、餐馆、学校、商铺、中央厨房和展厅在内的各种商业装修改造服务。我们的服务涵盖设计、施工、基础设施建设和装饰等各个方面。"
+      },
+      {
+        "q": "右岩建筑的服务区域有哪些？",
+        "a": "我们主要服务于温哥华、本那比、列治文、素里等周边城市。"
+      },
+      {
+        "q": "你们的项目通常需要多长时间完成？",
+        "a": "项目的完成时间取决于项目的规模和复杂性。我们承诺在最短时间内完成高质量的装修工程，并在项目开始前提供详细的时间表。"
+      },
+      {
+        "q": "你们如何确保施工质量？",
+        "a": "我们拥有一支经验丰富的专业团队，严格控制每个施工环节，使用高质量的材料，并遵循行业最佳实践和标准。此外，我们提供全面的保固服务，确保项目的长期质量。"
+      },
+      {
+        "q": "你们的收费标准是怎样的？",
+        "a": "我们的收费标准根据项目的规模、复杂性和具体需求而定。在项目开始前，我们会提供详细的报价单，确保收费透明、合理。"
+      },
+      {
+        "q": "你们能否提供设计服务？",
+        "a": "是的，我们能提供全面的设计服务。我们有专门的室内设计部门会根据您的需求和审美偏好，制定独特的设计方案。"
+      },
+      {
+        "q": "你们是否提供售后服务？",
+        "a": "我们提供优质的售后服务，包括全面的保固服务和专业的客服支持。无论是在保修期内还是保修期外，您都可以随时联系我们，得到及时和专业的帮助。"
+      },
+      {
+        "q": "你们处理哪些类型的基础设施建设？",
+        "a": "我们提供水、电、空调、瓦斯系统的安装和改造服务，确保您的商业空间具备完善的基础设施，满足日常运营需求。"
+      },
+      {
+        "q": "如何开始与右岩建筑合作？",
+        "a": "您可以通过电话、邮件或我们的网站联系我们。我们将安排初步的咨询，了解您的需求，并制定初步的项目规划和报价。"
+      },
+      {
+        "q": "你们有没有成功完成的知名项目？",
+        "a": "是的，我们已经成功完成了多项知名项目，包括大味麻辣燙（Big Way Hot Pot）、麻六（Myth Szechuan Cuisine）、半步仙小酒館（Tasty BBQ & Beer Bar）、海康威視溫哥華辦公室（Hik Vision）、真果（Real Fruit Bubble Tea）、快樂小羊（Happy Lamb Hotpot）等。"
+      }
+    ]
+  },
+  "joinUs": {
+    "header": {
+      "title": "加入我们",
+      "breadcrumb": ["首页", "加入我们"]
+    },
+    "form": {
+      "firstName": "名字 *",
+      "lastName": "姓 *",
+      "email": "邮箱 *",
+      "phone": "电话 *",
+      "positionDefault": "请选择有意向的职位",
+      "positions": [
+        { "value": "interior-designer", "label": "室内设计师" },
+        { "value": "pm-assistant", "label": "项目经理助理" },
+        { "value": "site-supervisor", "label": "现场主管" }
+      ],
+      "message": "补充信息 *",
+      "resume": "简历",
+      "resumeHint": "点击上传文件（限PDF，最大25MB）",
+      "browseFile": "浏览文件",
+      "submit": "提交",
+      "submitting": "提交中...",
+      "successMessage": "您的申请已成功提交！",
+      "errorMessage": "提交失败，请稍后重试。"
+    },
+    "contact": {
+      "phone": { "label": "电话", "value": "+1 (604) 349-9888" },
+      "email": { "label": "邮箱", "value": "info@yyconstruction.ca" },
+      "address": { "label": "地址", "value": "Unit 1 - 2480 Shell Rd, Richmond, British Columbia, V6X 2P1" },
+      "wechat": { "label": "微信" }
+    }
+  },
+  "ourTeam": {
+    "header": {
+      "title": "我们的团队",
+      "breadcrumb": ["首页", "我们的团队"]
+    },
+    "sectionTitle": "我们的团队",
+    "subtitle": "创意不息，",
+    "subtitleAccent": "思无止境",
+    "description": "我们提供全方位定制室内设计服务，从概念构思到最终落地，精准契合您的独特需求。",
+    "groups": [
+      {
+        "name": "高管团队",
+        "members": [
+          { "name": "Rong Yu", "title": "Director", "image": "team/Rong_Yu.jpg" },
+          { "name": "Andy Zhou", "title": "Vice President", "image": "team/Andy_Zhou.jpg" },
+          { "name": "Langsha Tao", "title": "Operation Manager", "image": "team/Langsha_Tao.jpg" }
+        ]
+      },
+      {
+        "name": "设计团队",
+        "members": [
+          { "name": "Alex Mai", "title": "Design Director", "image": "team/Alex_Mai.jpg" },
+          { "name": "Kasey", "title": "Designer", "image": "team/Kasey.jpg" },
+          { "name": "Queenie Wang", "title": "Design Director", "image": "team/Queenie_Wang.jpg" }
+        ]
+      },
+      {
+        "name": "项目管理团队",
+        "members": [
+          { "name": "Jackie Lu", "title": "Project Manager", "image": "team/Jackie_Ru.jpg" },
+          { "name": "Ronald Zhang", "title": "Project Manager", "image": "team/Ronald_Zhang.jpg" },
+          { "name": "Rachel Ruan", "title": "Project Manager", "image": "team/Rachel_Ruan.jpg" },
+          { "name": "Anthony Chung", "title": "Coordinator", "image": "team/Anthony_Chung.jpg" },
+          { "name": "Steven Zhang", "title": "Project Manager Assistant", "image": "team/Steven_Zhang.jpg" },
+          { "name": "Dylan Zhu", "title": "Project Manager Assistant", "image": "team/Dylan_Zhu.jpg" }
+        ]
+      }
+    ]
+  },
+  "tearDownRebuild": {
+    "header": {
+      "title": "推倒重建",
+      "breadcrumb": ["首页", "服务", "推倒重建"]
+    },
+    "intro": {
+      "p1": "我们的拆除重建服务提供将过时房产彻底改造为现代化、高性能住宅或投资资产的完整方案。从拆除、场地准备到建筑规划和全面施工，我们以精湛的工艺和细致的关怀管理每一步。",
+      "p2": "无论您是重建梦想家园还是开发转售，我们的团队都能确保无缝的许可证办理、结构优化和量身定制的设计。"
+    },
+    "sections": [
+      {
+        "title": "拆除与场地准备",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-entry-img.jpg",
+        "items": [
+          "我们协调水电管线断开和迁移，确保平稳过渡。",
+          "我们的团队遵循严格的安全协议，并负责任地处理有害物质。",
+          "我们评估土壤条件，并为地基区域做好准备，以实现最佳稳定性。",
+          "我们的流程包括侵蚀控制和排水规划，以实现长期耐用性。"
+        ]
+      },
+      {
+        "title": "建筑规划与设计",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-6.jpg",
+        "items": [
+          "我们与工程师和顾问合作，确保设计合规且富有创新性。",
+          "我们的设计在美观与实用之间取得平衡，提升形式和功能。",
+          "我们提供3D渲染和漫游，帮助您可视化未来的空间。",
+          "我们根据当地分区和环境要求定制每个方案。"
+        ]
+      },
+      {
+        "title": "许可证与监管审批",
+        "image": "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/project-4.jpg",
+        "items": [
+          "我们负责提交、修改和跟进，以避免延误。",
+          "我们的专家高效地处理复杂的审批流程。",
+          "我们根据需要协助办理差异或用途变更申请。",
+          "我们时刻关注当地法规，确保您的项目顺利进行。"
+        ]
+      }
+    ]
+  },
+  "portfolioPage": {
+    "header": {
+      "title": "项目案例",
+      "breadcrumb": ["首页", "项目案例"]
+    },
+    "filters": {
+      "all": "全部",
+      "commercial": "商业项目",
+      "residential": "住宅项目"
+    },
+    "projectCount": "个项目",
+    "detail": {
+      "projectType": "项目类型",
+      "location": "项目地点",
+      "year": "完成年份",
+      "description": "项目描述",
+      "commercial": "商业项目",
+      "residential": "住宅项目",
+      "gallery": "项目图集",
+      "ctaTitle": "开启您的项目",
+      "ctaDescription": "准备好改造您的空间了吗？联系我们获取免费咨询。",
+      "ctaButton": "联系我们",
+      "backToPortfolio": "返回案例列表",
+      "relatedProjects": "相关项目"
+    }
+  },
+  "contactUs": {
+    "header": {
+      "title": "联系我们",
+      "breadcrumb": ["首页", "联系我们"]
+    },
+    "sectionTitle": "联系我们",
+    "sectionSubtitle": "免费咨询",
+    "sectionDescription": "我们很乐意协助您解决任何关于装修方面的咨询，并提供免费报价。我们通常会在2到3个工作日内回复，期待尽快与您联系。",
+    "info": {
+      "phone": { "label": "电话", "value": "+1 (604) 349-9888" },
+      "email": { "label": "邮箱", "value": "info@yyconstruction.ca" },
+      "address": { "label": "地址", "value": "Unit 1 - 2480 Shell Rd, Richmond, BC, Canada, V6X 2P1" }
+    },
+    "form": {
+      "title": "联系我们",
+      "subtitle": "我们期待您的来信。",
+      "note": "您的电子邮件地址不会被公开。必填字段标有 *。",
+      "name": "名字*",
+      "email": "邮箱*",
+      "phone": "电话*",
+      "message": "咨询内容*",
+      "submit": "发送消息",
+      "submitting": "发送中...",
+      "successMessage": "消息发送成功！我们会尽快回复您。",
+      "errorMessage": "发送失败，请重试。"
+    }
+  }
+}

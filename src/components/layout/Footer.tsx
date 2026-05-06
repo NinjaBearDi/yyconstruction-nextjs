@@ -12,7 +12,7 @@ const Footer = () => {
             {/* Logo */}
             <div className="mb-8 md:mb-0">
               <Image 
-                src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/yy-logo.png" 
+                src="https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/Footer/img_yy-logo.png" 
                 alt="Y & Y Construction Logo" 
                 width={240} 
                 height={70} 
@@ -130,15 +130,6 @@ const Footer = () => {
                   </div>
                 </li>
               </ul>
-              <div className="mt-8">
-                <Link 
-                  href="/evaluation" 
-                  className="relative inline-flex items-center group bg-[#aa8b57] text-white px-8 py-3.5 overflow-hidden transition-all duration-500 w-full justify-center"
-                >
-                  <span className="absolute left-0 w-0 h-full bg-white transition-all duration-500 group-hover:w-full"></span>
-                  <span className="relative z-10 font-bold uppercase tracking-widest text-[14px] group-hover:text-[#192324] transition-colors duration-500">Free Consultation</span>
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -160,7 +151,7 @@ const Footer = () => {
       </footer>
 
       {/* Floating Free Consultation Button */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center hidden md:flex">
+      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden md:flex items-center">
         <Link 
           href="/evaluation" 
           className="flex items-center justify-center w-12 h-60 bg-gradient-to-br from-[#aa8b57] to-[#192324] text-white rounded-l-lg shadow-[-5px_5px_15px_rgba(0,0,0,0.2)] hover:pr-2 transition-all duration-300 group"

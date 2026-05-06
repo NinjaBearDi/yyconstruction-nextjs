@@ -20,10 +20,10 @@ interface WhyChooseUsProps {
 
 const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
   const icons = [
-    "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-1.svg",
-    "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-2.svg",
-    "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-3.svg",
-    "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/icon-why-choose-3.svg"
+    "/images/icon-why-choose-us-1.svg",
+    "/images/icon-why-choose-us-2.svg",
+    "/images/icon-why-choose-us-3.svg",
+    "/images/icon-why-choose-us-3.svg"
   ];
 
   return (
@@ -79,7 +79,7 @@ const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
               <div className="space-y-4 md:space-y-6 lg:space-y-8 pt-8 md:pt-12">
                 <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
                   <Image 
-                    src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/why-choose-img-1.jpg" 
+                    src="https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/WhyChooseUs/img_why-choose-us-1.jpg" 
                     alt="Work in progress 1" 
                     fill 
                     className="object-cover"
@@ -88,7 +88,7 @@ const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
                 </div>
                 <div className="relative aspect-square rounded-lg overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
                   <Image 
-                    src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/why-choose-img-4.jpg" 
+                    src="https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/WhyChooseUs/img_why-choose-us-4.jpg" 
                     alt="Finished project 2" 
                     fill 
                     className="object-cover"
@@ -101,7 +101,7 @@ const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
               <div className="space-y-4 md:space-y-6 lg:space-y-8 pb-8 md:pb-12">
                 <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
                   <Image 
-                    src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/why-choose-img-3.jpg" 
+                    src="https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/WhyChooseUs/img_why-choose-us-3.jpg" 
                     alt="Finished project 1" 
                     fill 
                     className="object-cover"
@@ -110,7 +110,7 @@ const WhyChooseUs = ({ dict }: WhyChooseUsProps) => {
                 </div>
                 <div className="relative aspect-square rounded-lg overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
                   <Image 
-                    src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/why-choose-img-2.jpg" 
+                    src="https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/WhyChooseUs/img_why-choose-us-2.jpg" 
                     alt="Interior detail" 
                     fill 
                     className="object-cover"

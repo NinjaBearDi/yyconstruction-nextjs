@@ -5,23 +5,23 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 const serviceLinksAndImages = [
   {
-    image: "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-1.jpg",
+    image: "https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/OurServices/img_service-1.jpg",
     link: "/services/residential-design-renovation"
   },
   {
-    image: "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-2.jpg",
+    image: "https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/OurServices/img_service-2.jpg",
     link: "/services/commercial-design-renovation"
   },
   {
-    image: "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-3.jpg",
+    image: "https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/OurServices/img_service-3.jpg",
     link: "/services/design-drawings-city-approvals"
   },
   {
-    image: "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-7.jpg",
+    image: "https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/OurServices/img_service-4.jpg",
     link: "/services/project-management"
   },
   {
-    image: "https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/service-8.jpg",
+    image: "https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/OurServices/img_service-5.jpg",
     link: "/services/tear-down-rebuild"
   }
 ];
@@ -32,6 +32,7 @@ interface ServiceItem {
 }
 
 interface OurServicesProps {
+  lang: 'en' | 'zh';
   dict: {
     title: string;
     subtitle: string;
@@ -42,7 +43,7 @@ interface OurServicesProps {
   };
 }
 
-const OurServices = ({ dict }: OurServicesProps) => {
+const OurServices = ({ lang, dict }: OurServicesProps) => {
   return (
     <section className="py-12 lg:py-24 bg-white text-[#192324] relative overflow-hidden">
       {/* Background shape decoration */}
@@ -74,6 +75,7 @@ const OurServices = ({ dict }: OurServicesProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {dict.items.map((service, index) => {
             const meta = serviceLinksAndImages[index];
+            const href = `/${lang}${meta.link}`;
             return (
               <div 
                 key={index} 
@@ -93,8 +95,8 @@ const OurServices = ({ dict }: OurServicesProps) => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#192324] via-[#192324]/40 to-transparent z-10 opacity-70 group-hover:opacity-85 transition-opacity duration-500"></div>
                   
                   {/* Arrow Button (Absolute within image container) */}
-                  <Link 
-                    href={meta.link}
+                  <Link
+                    href={href}
                     className="absolute top-6 right-6 lg:top-8 lg:right-8 w-12 h-12 lg:w-14 lg:h-14 bg-[#aa8b57] rounded-full flex items-center justify-center z-20 transition-all duration-300 hover:bg-[#192324] group/btn shadow-lg"
                   >
                     <div className="relative w-5 h-5 -rotate-45 group-hover/btn:rotate-0 transition-transform duration-500">
@@ -110,15 +112,15 @@ const OurServices = ({ dict }: OurServicesProps) => {
                   {/* Content (Absolute overlaying the image) */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-10 z-20">
                     <h3 className="text-white text-xl lg:text-2xl font-bold mb-3 transition-colors duration-300 group-hover:text-[#aa8b57]">
-                      <Link href={meta.link}>
+                      <Link href={href}>
                         {service.title}
                       </Link>
                     </h3>
                     <p className="text-white/80 text-sm md:text-base mb-6 line-clamp-3 leading-relaxed transition-colors duration-300 group-hover:text-white">
                       {service.description}
                     </p>
-                    <Link 
-                      href={meta.link}
+                    <Link
+                      href={href}
                       className="inline-flex items-center text-white text-xs lg:text-sm font-bold uppercase tracking-[0.2em] transition-all duration-300 group-hover:text-[#aa8b57]"
                     >
                       <span className="border-b border-white/50 pb-1 group-hover:border-[#aa8b57] transition-colors">{dict.learnMore}</span>

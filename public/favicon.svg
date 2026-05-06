@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 将 rx 增加到 128，使背景更加圆滑 -->
+  <rect width="512" height="512" rx="128" fill="white"/>
+  
+  <!-- Logo 线条继续保持品牌深色 #192324 -->
+  <path 
+    d="M100 450 H256 V210 L100 60 M285 210 L441 60" 
+    stroke="#192324" 
+    stroke-width="40" 
+    stroke-linecap="butt" 
+    stroke-linejoin="miter"
+  />
+</svg>

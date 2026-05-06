@@ -89,8 +89,8 @@ const Navbar = () => {
   ];
 
   const languages = [
-    { name: 'English', code: 'en', flag: 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/languages/en.png' },
-    { name: '简体中文', code: 'zh', flag: 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/languages/zh.png' },
+    { name: 'English', code: 'en', flag: 'https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/Navbar/img_en.png' },
+    { name: '简体中文', code: 'zh', flag: 'https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/Navbar/img_zh.png' },
   ];
 
   return (
@@ -100,7 +100,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href={`/${currentLang}`} className="relative transition-transform hover:scale-105 duration-300 shrink-0">
             <Image 
-              src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/yy-logo.png" 
+              src="https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/Navbar/img_yy-logo.png" 
               alt="Y & Y Construction Logo" 
               width={240} 
               height={70} 

@@ -621,5 +621,53 @@
       "successMessage": "消息发送成功！我们会尽快回复您。",
       "errorMessage": "发送失败，请重试。"
     }
+  },
+  "evaluation": {
+    "header": {
+      "title": "免费估价",
+      "breadcrumb": ["首页", "免费估价"]
+    },
+    "form": {
+      "firstName": "名",
+      "lastName": "姓",
+      "title": "称谓",
+      "titleOptions": [
+        { "value": "", "label": "请选择您的称谓" },
+        { "value": "mr", "label": "先生" },
+        { "value": "mrs", "label": "太太" },
+        { "value": "ms", "label": "女士" },
+        { "value": "dr", "label": "博士" },
+        { "value": "miss", "label": "小姐" }
+      ],
+      "email": "邮箱",
+      "phone": "电话",
+      "wechat": "微信",
+      "projectType": "项目类型",
+      "projectTypeOptions": [
+        { "value": "", "label": "请选择您的物业类型" },
+        { "value": "house", "label": "独立屋" },
+        { "value": "apartment", "label": "公寓" },
+        { "value": "commercial", "label": "商业" },
+        { "value": "corporate", "label": "办公" },
+        { "value": "restaurant", "label": "餐饮" }
+      ],
+      "startDate": "期望开工日期",
+      "contactMethod": "您希望我们通过什么方式联系您？",
+      "contactOptions": [
+        { "value": "email", "label": "邮件" },
+        { "value": "phone", "label": "电话" },
+        { "value": "text", "label": "短信" },
+        { "value": "wechat", "label": "微信" }
+      ],
+      "address": "项目地址",
+      "description": "项目描述",
+      "files": "项目相关文件",
+      "filesHint": "最多上传10个文件，每个文件不超过25MB",
+      "browseFile": "选择文件",
+      "submit": "提交",
+      "submitting": "提交中...",
+      "successMessage": "您的估价请求已成功提交！",
+      "errorMessage": "提交失败，请重试。"
+    }
   }
 }

@@ -16,6 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: lang === 'zh' 
       ? "顶尖空间规划与一级施工品质的完美融合。" 
       : "Expert space planning meets top-tier construction quality in Vancouver.",
+    icons: {
+      icon: '/favicon.svg', 
+    },
   };
 }
 

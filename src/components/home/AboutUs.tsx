@@ -95,7 +95,7 @@ const AboutUs = ({ dict }: AboutUsProps) => {
                   <div className="flex items-center group">
                     <div className="w-12 h-12 shrink-0 bg-[#aa8b57] text-white rounded-full flex items-center justify-center mr-4 shadow-sm group-hover:bg-[#192324] transition-all duration-300">
                       <Image 
-                        src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/favicon.ico" 
+                        src="https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/AboutUs/favicon.ico" 
                         alt="Y & Y Construction" 
                         width={24} 
                         height={24} 
@@ -130,7 +130,7 @@ const AboutUs = ({ dict }: AboutUsProps) => {
             {/* About Image 1 */}
             <div className="relative z-10 w-full aspect-[1/0.76] shadow-2xl rounded-sm overflow-hidden">
               <Image 
-                src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/about-img-1.jpg" 
+                src="https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/AboutUs/about-us-1.jpg" 
                 alt="About Y & Y Construction 1" 
                 fill 
                 className="object-cover"
@@ -142,7 +142,7 @@ const AboutUs = ({ dict }: AboutUsProps) => {
             <div className="absolute bottom-0 right-0 w-[65%] sm:w-[55%] xl:w-[400px] z-20 shadow-2xl rounded-sm border-4 md:border-8 border-white">
               <div className="relative w-full aspect-[1/0.76] rounded-sm overflow-hidden">
                 <Image 
-                  src="https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/about-img-2.jpg" 
+                  src="https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/AboutUs/about-us-2.jpg" 
                   alt="About Y & Y Construction 2" 
                   fill 
                   className="object-cover"

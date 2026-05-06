@@ -21,7 +21,7 @@ export default async function HomePage({
       <HeroSection dict={dict.hero} />
       <AboutUs dict={dict.about} />
       <WhyChooseUs dict={dict.whyChooseUs} />
-      <OurServices dict={dict.services} />
+      <OurServices lang={lang} dict={dict.services} />
       <HowWeWork dict={dict.howWeWork} />
       <PortfolioPreview projects={projects} dict={dict.portfolio} lang={lang} />
     </div>

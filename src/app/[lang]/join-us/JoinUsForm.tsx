@@ -55,11 +55,24 @@ export default function JoinUsForm({ formData }: { formData: FormData }) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const form = e.currentTarget;
+    const formDataToSend = new FormData(form);
 
-    setIsSubmitting(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch('/api/join-us', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        alert(formData.errorMessage);
+      }
+    } catch {
+      alert(formData.errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {

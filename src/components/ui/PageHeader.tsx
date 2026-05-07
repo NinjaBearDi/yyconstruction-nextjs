@@ -1,17 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
 
+export type BreadcrumbItem = string | { label: string; href: string };
+
 interface PageHeaderProps {
   title: string;
-  breadcrumb: string[];
+  breadcrumb: BreadcrumbItem[];
   lang: 'en' | 'zh';
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({ title, breadcrumb, lang }) => {
+  const getItem = (item: BreadcrumbItem): { label: string; href?: string } =>
+    typeof item === 'string' ? { label: item } : item;
+
   return (
     <section className="relative pt-[240px] pb-[80px] lg:pt-[340px] lg:pb-[110px] -mt-[118px] overflow-hidden bg-[#192324]">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 z-0 bg-cover bg-[center_25%] bg-no-repeat opacity-70"
         style={{ backgroundImage: "url('https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/page-header-bg.jpg')" }}
       ></div>
@@ -27,20 +32,24 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, breadcrumb, lang }) => {
 
           {/* Breadcrumb - Center Aligned */}
           <nav className="flex items-center justify-center space-x-3 text-base md:text-xl font-medium text-white">
-            {breadcrumb.map((item, index) => (
-              <React.Fragment key={index}>
-                {index === breadcrumb.length - 1 ? (
-                  <span className="text-[#aa8b57]">{item}</span>
-                ) : (
-                  <Link href={index === 0 ? `/${lang}` : `/${lang}/services`} className="hover:text-[#aa8b57] transition-colors">
-                    {item}
-                  </Link>
-                )}
-                {index < breadcrumb.length - 1 && (
-                  <span className="opacity-60">/</span>
-                )}
-              </React.Fragment>
-            ))}
+            {breadcrumb.map((rawItem, index) => {
+              const { label, href } = getItem(rawItem);
+              const isLast = index === breadcrumb.length - 1;
+              const computedHref =
+                href ?? (index === 0 ? `/${lang}` : `/${lang}/services`);
+              return (
+                <React.Fragment key={index}>
+                  {isLast ? (
+                    <span className="text-[#aa8b57]">{label}</span>
+                  ) : (
+                    <Link href={computedHref} className="hover:text-[#aa8b57] transition-colors">
+                      {label}
+                    </Link>
+                  )}
+                  {!isLast && <span className="opacity-60">/</span>}
+                </React.Fragment>
+              );
+            })}
           </nav>
         </div>
       </div>

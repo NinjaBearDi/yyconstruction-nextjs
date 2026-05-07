@@ -10,6 +10,8 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Projects } from './collections/Projects'
 import { Services } from './collections/Services'
+import { Tags } from './collections/Tags'
+import { Blogs } from './collections/Blogs'
 import { AboutPage } from './globals/AboutPage'
 import { OurTeamPage } from './globals/OurTeamPage'
 
@@ -23,7 +25,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Projects, Services],
+  collections: [Users, Media, Projects, Services, Tags, Blogs],
   globals: [AboutPage, OurTeamPage],
   editor: lexicalEditor(),
   localization: {

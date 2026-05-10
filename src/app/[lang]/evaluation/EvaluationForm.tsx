@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import { useRecaptcha } from '@/lib/use-recaptcha';
 
 interface EvaluationFormProps {
   lang: 'en' | 'zh';
@@ -34,8 +35,25 @@ export default function EvaluationForm({ lang, dict }: EvaluationFormProps) {
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [selectedContacts, setSelectedContacts] = useState<string[]>([]);
   const [fileNames, setFileNames] = useState<string[]>([]);
+  const [filesTotalSize, setFilesTotalSize] = useState(0);
+  const [filesError, setFilesError] = useState('');
   const [dateSelected, setDateSelected] = useState(false);
   const dateInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const { executeRecaptcha } = useRecaptcha();
+
+  const MAX_TOTAL_SIZE = 4 * 1024 * 1024; // 4 MB total (Vercel's hard cap is 4.5 MB)
+
+  const formatBytes = (bytes: number) => {
+    if (bytes < 1024) return `${bytes} B`;
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+    return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+  };
+
+  const tooLargeMsg =
+    lang === 'zh'
+      ? `所选文件总大小 {size} 超过 4 MB 上限，请压缩后重试，或将大文件直接发送至 info@yyconstruction.ca`
+      : `Selected files total {size} exceed the 4 MB limit. Please compress them or email large files directly to info@yyconstruction.ca`;
 
   const openDatePicker = () => {
     const input = dateInputRef.current;
@@ -59,12 +77,22 @@ export default function EvaluationForm({ lang, dict }: EvaluationFormProps) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (filesTotalSize > MAX_TOTAL_SIZE) {
+      setFilesError(tooLargeMsg.replace('{size}', formatBytes(filesTotalSize)));
+      return;
+    }
+
     setIsSubmitting(true);
     setStatus('idle');
+    setFilesError('');
 
     const formData = new FormData(e.currentTarget);
     formData.delete('contactMethods');
     selectedContacts.forEach((c) => formData.append('contactMethods', c));
+
+    const token = await executeRecaptcha('evaluation_submit');
+    if (token) formData.append('recaptchaToken', token);
 
     try {
       const res = await fetch('/api/evaluation', {
@@ -257,14 +285,12 @@ export default function EvaluationForm({ lang, dict }: EvaluationFormProps) {
           {dict.files}
         </label>
         <p className="text-xs text-gray-400 mb-2">{dict.filesHint}</p>
-        <label className="flex items-center gap-4 cursor-pointer">
-          <span className="px-4 py-2 bg-[#aa8b57] text-white font-semibold rounded-lg hover:bg-[#192324] transition-colors duration-300">
-            {dict.browseFile}
-          </span>
-          <span className="text-sm text-gray-500">
-            {fileNames.length > 0 ? fileNames.join(', ') : ''}
-          </span>
+        <div
+          onClick={() => fileInputRef.current?.click()}
+          className="w-full px-4 py-6 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-[#aa8b57] transition-colors text-center"
+        >
           <input
+            ref={fileInputRef}
             name="files"
             type="file"
             multiple
@@ -272,12 +298,35 @@ export default function EvaluationForm({ lang, dict }: EvaluationFormProps) {
             className="hidden"
             onChange={(e) => {
               const files = e.target.files;
-              if (files) {
-                setFileNames(Array.from(files).map((f) => f.name));
+              if (files && files.length > 0) {
+                const arr = Array.from(files);
+                const total = arr.reduce((sum, f) => sum + f.size, 0);
+                setFileNames(arr.map((f) => f.name));
+                setFilesTotalSize(total);
+                if (total > MAX_TOTAL_SIZE) {
+                  setFilesError(tooLargeMsg.replace('{size}', formatBytes(total)));
+                } else {
+                  setFilesError('');
+                }
+              } else {
+                setFileNames([]);
+                setFilesTotalSize(0);
+                setFilesError('');
               }
             }}
           />
-        </label>
+          {fileNames.length > 0 ? (
+            <p className="text-[#192324] font-medium">
+              {fileNames.join(', ')}{' '}
+              <span className="text-gray-500 font-normal">({formatBytes(filesTotalSize)})</span>
+            </p>
+          ) : (
+            <p className="text-gray-400">{dict.browseFile}</p>
+          )}
+        </div>
+        {filesError && (
+          <p className="mt-2 text-sm text-red-600 font-medium">{filesError}</p>
+        )}
       </div>
 
       {/* Submit */}

@@ -11,13 +11,53 @@ const montserrat = Montserrat({
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const lang = (await params).lang;
+  const isZh = lang === 'zh';
+  const title = isZh ? "右岩建筑 Y&Y Construction" : "Y & Y Construction";
+  const description = isZh
+    ? "顶尖空间规划与一级施工品质的完美融合。"
+    : "Expert space planning meets top-tier construction quality in Vancouver.";
   return {
-    title: lang === 'zh' ? "右岩建筑 Y&Y Construction" : "Y & Y Construction",
-    description: lang === 'zh' 
-      ? "顶尖空间规划与一级施工品质的完美融合。" 
-      : "Expert space planning meets top-tier construction quality in Vancouver.",
+    metadataBase: new URL('https://yyconstruction.ca'),
+    title: {
+      default: title,
+      template: `%s | ${title}`,
+    },
+    description,
+    keywords: isZh
+      ? ['温哥华装修', '商业装修', '住宅装修', '设计施工', '右岩建筑', 'Vancouver renovation']
+      : ['Vancouver renovation', 'commercial renovation', 'residential design', 'construction Vancouver', 'design build', 'Y&Y Construction'],
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        en: '/en',
+        zh: '/zh',
+      },
+    },
+    openGraph: {
+      type: 'website',
+      locale: isZh ? 'zh_CN' : 'en_CA',
+      url: `https://yyconstruction.ca/${lang}`,
+      siteName: title,
+      title,
+      description,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
     icons: {
-      icon: '/favicon.svg', 
+      icon: '/favicon.svg',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }

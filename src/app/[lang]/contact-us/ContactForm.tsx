@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRecaptcha } from '@/lib/use-recaptcha';
 
 interface FormLabels {
   name: string;
@@ -16,16 +17,35 @@ interface FormLabels {
 export default function ContactForm({ formData }: { formData: FormLabels }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+  const { executeRecaptcha } = useRecaptcha();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMsg('');
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const form = e.currentTarget;
+    const dataToSend = new FormData(form);
 
-    setIsSubmitting(false);
-    setSubmitted(true);
+    const token = await executeRecaptcha('contact_us_submit');
+    if (token) dataToSend.append('recaptchaToken', token);
+
+    try {
+      const res = await fetch('/api/contact-us', {
+        method: 'POST',
+        body: dataToSend,
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(formData.errorMessage);
+      }
+    } catch {
+      setErrorMsg(formData.errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -83,6 +103,10 @@ export default function ContactForm({ formData }: { formData: FormLabels }) {
       >
         {isSubmitting ? formData.submitting : formData.submit}
       </button>
+
+      {errorMsg && (
+        <p className="text-red-600 font-medium">{errorMsg}</p>
+      )}
     </form>
   );
 }

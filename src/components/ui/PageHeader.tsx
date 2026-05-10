@@ -18,7 +18,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, breadcrumb, lang }) => {
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-[center_25%] bg-no-repeat opacity-70"
-        style={{ backgroundImage: "url('https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca/page-header-bg.jpg')" }}
+        style={{ backgroundImage: "url('https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/PageHeader/page-header-bg.jpg')" }}
       ></div>
 
       {/* Gradient Overlay */}

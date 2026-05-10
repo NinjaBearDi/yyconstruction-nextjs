@@ -4,7 +4,7 @@ import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
 import FaqAccordion from './FaqAccordion';
 
-const S3_BASE = 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca';
+const SUPA_BASE = 'https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets';
 
 export default async function FaqPage({
   params,
@@ -34,7 +34,7 @@ export default async function FaqPage({
               <div className="relative rounded-2xl overflow-hidden shadow-xl sticky top-8">
                 <div className="aspect-[1/1.26]">
                   <Image
-                    src={`${S3_BASE}/green-1.jpg`}
+                    src={`${SUPA_BASE}/QA/QA-left-img.jpg`}
                     alt="Y&Y Construction"
                     fill
                     className="object-cover"

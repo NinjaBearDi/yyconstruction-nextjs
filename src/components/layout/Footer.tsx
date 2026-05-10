@@ -146,6 +146,27 @@ const Footer = () => {
                 </span>
               </p>
             </div>
+            <p className="mt-4 text-center text-xs text-white/40">
+              This site is protected by reCAPTCHA and the Google{' '}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[#aa8b57] transition-colors"
+              >
+                Privacy Policy
+              </a>{' '}
+              and{' '}
+              <a
+                href="https://policies.google.com/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[#aa8b57] transition-colors"
+              >
+                Terms of Service
+              </a>{' '}
+              apply.
+            </p>
           </div>
         </div>
       </footer>
@@ -162,11 +183,14 @@ const Footer = () => {
         </Link>
       </div>
 
-      {/* CSS for vertical text */}
+      {/* CSS for vertical text + hide reCAPTCHA badge */}
       <style dangerouslySetInnerHTML={{__html: `
         .writing-vertical {
           writing-mode: vertical-rl;
           text-orientation: mixed;
+        }
+        .grecaptcha-badge {
+          visibility: hidden !important;
         }
       `}} />
     </>

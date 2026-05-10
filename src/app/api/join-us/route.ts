@@ -1,9 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { verifyRecaptcha } from '@/lib/recaptcha'
 
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData()
+
+    const recaptchaToken = formData.get('recaptchaToken') as string | null
+    const captcha = await verifyRecaptcha(recaptchaToken, 'join_us_submit')
+    if (!captcha.ok) {
+      console.warn('Join Us reCAPTCHA rejected:', captcha.reason)
+      return NextResponse.json({ error: 'Verification failed' }, { status: 400 })
+    }
 
     const firstName = formData.get('firstName') as string
     const lastName = formData.get('lastName') as string

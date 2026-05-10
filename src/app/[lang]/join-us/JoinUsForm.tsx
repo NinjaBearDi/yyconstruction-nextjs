@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
+import { useRecaptcha } from '@/lib/use-recaptcha';
 
 interface Position {
   value: string;
@@ -29,6 +30,7 @@ export default function JoinUsForm({ formData }: { formData: FormData }) {
   const [submitted, setSubmitted] = useState(false);
   const [fileName, setFileName] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const { executeRecaptcha } = useRecaptcha();
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -39,8 +41,8 @@ export default function JoinUsForm({ formData }: { formData: FormData }) {
         setFileName('');
         return;
       }
-      if (file.size > 25 * 1024 * 1024) {
-        alert('Max 25MB');
+      if (file.size > 4 * 1024 * 1024) {
+        alert('File too large. Max 4 MB. For larger resumes, please email info@yyconstruction.ca directly.');
         e.target.value = '';
         setFileName('');
         return;
@@ -57,6 +59,9 @@ export default function JoinUsForm({ formData }: { formData: FormData }) {
 
     const form = e.currentTarget;
     const formDataToSend = new FormData(form);
+
+    const token = await executeRecaptcha('join_us_submit');
+    if (token) formDataToSend.append('recaptchaToken', token);
 
     try {
       const res = await fetch('/api/join-us', {

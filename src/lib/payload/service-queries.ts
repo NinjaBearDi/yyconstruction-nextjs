@@ -91,8 +91,8 @@ export async function getAllServices(locale: 'en' | 'zh'): Promise<ServiceLink[]
   })
 
   return result.docs.map((doc) => ({
-    title: String((doc as Record<string, unknown>).title ?? ''),
-    slug: String((doc as Record<string, unknown>).slug ?? ''),
+    title: String((doc as unknown as Record<string, unknown>).title ?? ''),
+    slug: String((doc as unknown as Record<string, unknown>).slug ?? ''),
   }))
 }
 
@@ -106,5 +106,5 @@ export async function getAllServiceSlugs(): Promise<string[]> {
     pagination: false,
   })
 
-  return result.docs.map((doc) => String((doc as Record<string, unknown>).slug ?? ''))
+  return result.docs.map((doc) => String((doc as unknown as Record<string, unknown>).slug ?? ''))
 }

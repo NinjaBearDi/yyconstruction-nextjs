@@ -41,3 +41,9 @@ yarn-error.log*
 next-env.d.ts
 
 PROJECT_ANALYSIS.md
+
+# Claude Code local config
+.agents/
+.claude/
+.mcp.json
+skills-lock.json

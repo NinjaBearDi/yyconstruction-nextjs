@@ -203,6 +203,40 @@ export interface Project {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Optional project content displayed below the gallery
+   */
+  content?:
+    | (
+        | {
+            level: 'h2' | 'h3';
+            text: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'heading';
+          }
+        | {
+            text: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'paragraph';
+          }
+        | {
+            image: number | Media;
+            caption?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'image';
+          }
+        | {
+            text: string;
+            cite?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'quote';
+          }
+      )[]
+    | null;
   sortOrder?: number | null;
   isPublished?: boolean | null;
   updatedAt: string;
@@ -460,6 +494,41 @@ export interface ProjectsSelect<T extends boolean = true> {
     | {
         image?: T;
         id?: T;
+      };
+  content?:
+    | T
+    | {
+        heading?:
+          | T
+          | {
+              level?: T;
+              text?: T;
+              id?: T;
+              blockName?: T;
+            };
+        paragraph?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+              blockName?: T;
+            };
+        image?:
+          | T
+          | {
+              image?: T;
+              caption?: T;
+              id?: T;
+              blockName?: T;
+            };
+        quote?:
+          | T
+          | {
+              text?: T;
+              cite?: T;
+              id?: T;
+              blockName?: T;
+            };
       };
   sortOrder?: T;
   isPublished?: T;

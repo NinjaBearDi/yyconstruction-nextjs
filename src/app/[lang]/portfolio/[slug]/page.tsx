@@ -5,7 +5,8 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
-import { getProjectBySlug, getRelatedProjects, getAllProjectSlugs } from '@/lib/payload/project-queries';
+import { getProjectBySlug, getProjectWithContent, getRelatedProjects, getAllProjectSlugs } from '@/lib/payload/project-queries';
+import type { ProjectContentBlock } from '@/lib/payload/project-queries';
 import ProjectGallery from './ProjectGallery';
 
 export async function generateStaticParams() {
@@ -33,7 +34,7 @@ export default async function ProjectDetailPage({
   const { lang, slug } = await params;
   const dict = await getDictionary(lang);
   const data = dict.portfolioPage;
-  const project = await getProjectBySlug(slug);
+  const project = await getProjectWithContent(slug, lang);
 
   if (!project) {
     notFound();
@@ -254,6 +255,13 @@ export default async function ProjectDetailPage({
                 images={project.gallery}
                 projectTitle={project.title[lang]}
               />
+
+              {/* Project Content Blocks */}
+              {project.content.length > 0 && (
+                <div className="mt-16 space-y-6">
+                  <ProjectContent blocks={project.content} />
+                </div>
+              )}
             </div>
           </div>
 
@@ -313,5 +321,56 @@ export default async function ProjectDetailPage({
         </div>
       </div>
     </main>
+  );
+}
+
+function ProjectContent({ blocks }: { blocks: ProjectContentBlock[] }) {
+  return (
+    <>
+      {blocks.map((block, idx) => {
+        if (block.type === 'heading') {
+          if (block.level === 'h2') {
+            return (
+              <h2 key={idx} id={block.id} className="text-2xl md:text-3xl font-bold text-[#192324] mt-12 mb-4">
+                {block.text}
+              </h2>
+            );
+          }
+          return (
+            <h3 key={idx} id={block.id} className="text-xl md:text-2xl font-bold text-[#192324] mt-8 mb-3">
+              {block.text}
+            </h3>
+          );
+        }
+        if (block.type === 'paragraph') {
+          return (
+            <p key={idx} className="text-gray-700 text-base md:text-lg leading-relaxed whitespace-pre-line">
+              {block.text}
+            </p>
+          );
+        }
+        if (block.type === 'image' && block.url) {
+          return (
+            <figure key={idx} className="my-10">
+              <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-lg">
+                <Image src={block.url} alt={block.caption ?? ''} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 768px" />
+              </div>
+              {block.caption && (
+                <figcaption className="mt-3 text-center text-sm text-gray-500 italic">{block.caption}</figcaption>
+              )}
+            </figure>
+          );
+        }
+        if (block.type === 'quote') {
+          return (
+            <blockquote key={idx} className="my-10 border-l-4 border-[#aa8b57] bg-[#aa8b57]/5 pl-6 py-4 pr-6 rounded-r-lg">
+              <p className="text-lg md:text-xl text-[#192324] italic leading-relaxed">&ldquo;{block.text}&rdquo;</p>
+              {block.cite && <cite className="block mt-3 text-sm text-gray-500 not-italic">— {block.cite}</cite>}
+            </blockquote>
+          );
+        }
+        return null;
+      })}
+    </>
   );
 }

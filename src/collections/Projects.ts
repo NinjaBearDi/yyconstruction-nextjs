@@ -74,6 +74,54 @@ export const Projects: CollectionConfig = {
       ],
     },
     {
+      name: 'content',
+      type: 'blocks',
+      labels: { singular: 'Block', plural: 'Blocks' },
+      admin: { description: 'Optional project content displayed below the gallery' },
+      blocks: [
+        {
+          slug: 'heading',
+          labels: { singular: 'Heading', plural: 'Headings' },
+          fields: [
+            {
+              name: 'level',
+              type: 'select',
+              required: true,
+              defaultValue: 'h2',
+              options: [
+                { label: 'H2 (Section)', value: 'h2' },
+                { label: 'H3 (Sub-section)', value: 'h3' },
+              ],
+            },
+            { name: 'text', type: 'text', required: true, localized: true },
+          ],
+        },
+        {
+          slug: 'paragraph',
+          labels: { singular: 'Paragraph', plural: 'Paragraphs' },
+          fields: [
+            { name: 'text', type: 'textarea', required: true, localized: true },
+          ],
+        },
+        {
+          slug: 'image',
+          labels: { singular: 'Image', plural: 'Images' },
+          fields: [
+            { name: 'image', type: 'upload', relationTo: 'media', required: true },
+            { name: 'caption', type: 'text', localized: true },
+          ],
+        },
+        {
+          slug: 'quote',
+          labels: { singular: 'Quote', plural: 'Quotes' },
+          fields: [
+            { name: 'text', type: 'textarea', required: true, localized: true },
+            { name: 'cite', type: 'text', localized: true },
+          ],
+        },
+      ],
+    },
+    {
       name: 'sortOrder',
       type: 'number',
       defaultValue: 0,

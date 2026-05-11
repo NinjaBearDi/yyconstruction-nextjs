@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     metadataBase: new URL('https://yyconstruction.ca'),
     title: {
       default: title,
-      template: `%s | ${title}`,
+      template: `%s`,
     },
     description,
     keywords: isZh

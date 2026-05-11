@@ -1,7 +1,18 @@
+import type { Metadata } from 'next';
 import PageHeader from '@/components/ui/PageHeader';
 import { getDictionary } from '@/lib/get-dictionary';
 import { getBlogPosts, getAllTags } from '@/lib/payload/blog-queries';
 import BlogsList from './BlogsList';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh' }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === 'zh' ? '博客' : 'Blog',
+    description: lang === 'zh'
+      ? '装修设计趋势、施工技巧、项目案例分享 — 右岩建筑博客。'
+      : 'Renovation trends, construction tips, and project insights from Y&Y Construction.',
+  };
+}
 
 export default async function BlogsPage({
   params,

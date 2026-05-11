@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
 import {
@@ -14,6 +15,16 @@ import BlogToc, { type TocItem } from './BlogToc';
 export async function generateStaticParams() {
   const slugs = await getAllBlogSlugs();
   return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh'; slug: string }> }): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const post = await getBlogPostBySlug(slug, lang);
+  if (!post) return { title: 'Not Found' };
+  return {
+    title: post.title,
+    description: post.excerpt,
+  };
 }
 
 export default async function BlogDetailPage({

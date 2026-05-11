@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
 import { getProjectBySlug, getRelatedProjects, getAllProjectSlugs } from '@/lib/payload/project-queries';
@@ -10,6 +11,18 @@ import ProjectGallery from './ProjectGallery';
 export async function generateStaticParams() {
   const slugs = await getAllProjectSlugs();
   return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh'; slug: string }> }): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const project = await getProjectBySlug(slug);
+  if (!project) return { title: 'Not Found' };
+  const title = lang === 'zh' ? project.title.zh : project.title.en;
+  const description = lang === 'zh' ? project.description.zh : project.description.en;
+  return {
+    title,
+    description: description ? description.slice(0, 160) : undefined,
+  };
 }
 
 export default async function ProjectDetailPage({

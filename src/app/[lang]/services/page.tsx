@@ -1,8 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
 import SectionHeader from '@/components/ui/SectionHeader';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh' }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === 'zh' ? '我们的服务' : 'Services',
+    description: lang === 'zh'
+      ? '住宅装修、商业装修、设计图纸与政府审批、项目管理、拆建重建 — 一站式设计施工服务。'
+      : 'Residential & commercial renovation, design drawings & city approvals, project management, tear-down & rebuild — full-service design and construction.',
+  };
+}
 
 const serviceLinksAndImages = [
   {

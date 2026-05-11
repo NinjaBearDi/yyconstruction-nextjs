@@ -1,6 +1,17 @@
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
 import EvaluationForm from './EvaluationForm';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh' }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === 'zh' ? '免费估价' : 'Free Evaluation',
+    description: lang === 'zh'
+      ? '提交您的项目信息，获取免费装修估价。温哥华住宅与商业装修专家。'
+      : 'Submit your project details for a free renovation estimate. Vancouver residential and commercial renovation experts.',
+  };
+}
 
 export default async function EvaluationPage({
   params,

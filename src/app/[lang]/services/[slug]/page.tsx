@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import { getServiceBySlug, getAllServices, getAllServiceSlugs } from '@/lib/payload/service-queries';
 import PageHeader from '@/components/ui/PageHeader';
@@ -14,6 +15,16 @@ export async function generateStaticParams() {
     params.push({ lang: 'zh', slug });
   }
   return params;
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh'; slug: string }> }): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const service = await getServiceBySlug(slug, lang);
+  if (!service) return { title: 'Not Found' };
+  return {
+    title: service.title,
+    description: service.introP1 ? service.introP1.slice(0, 160) : undefined,
+  };
 }
 
 export default async function ServicePage({

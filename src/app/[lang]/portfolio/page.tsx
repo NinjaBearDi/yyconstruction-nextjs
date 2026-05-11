@@ -1,8 +1,19 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
 import { getProjects } from '@/lib/payload/project-queries';
 import PortfolioGrid from './PortfolioGrid';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh' }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === 'zh' ? '项目案例' : 'Portfolio',
+    description: lang === 'zh'
+      ? '浏览右岩建筑的商业与住宅装修项目案例，包括餐厅、办公室、住宅翻新等。'
+      : 'Browse Y&Y Construction commercial and residential renovation projects including restaurants, offices, and home renovations.',
+  };
+}
 
 export default async function PortfolioPage({
   params,

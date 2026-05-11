@@ -1,9 +1,20 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import { getOurTeamPage } from '@/lib/payload/global-queries';
 import type { OurTeamGroup, OurTeamMember } from '@/lib/payload/global-queries';
 import PageHeader from '@/components/ui/PageHeader';
 import SectionHeader from '@/components/ui/SectionHeader';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh' }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === 'zh' ? '我们的团队' : 'Our Team',
+    description: lang === 'zh'
+      ? '认识右岩建筑的专业团队 — 高管、设计师、项目经理，30+全职成员为您服务。'
+      : 'Meet the Y&Y Construction team — executives, designers, and project managers. 30+ full-time professionals at your service.',
+  };
+}
 
 const S3_BASE = 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca';
 

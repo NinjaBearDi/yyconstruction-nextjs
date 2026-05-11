@@ -1,9 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import { getAboutPage } from '@/lib/payload/global-queries';
 import PageHeader from '@/components/ui/PageHeader';
 import SectionHeader from '@/components/ui/SectionHeader';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh' }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === 'zh' ? '关于我们' : 'About Us',
+    description: lang === 'zh'
+      ? '右岩建筑是温哥华全方位设计施工一体化公司，专注商业与住宅装修，十年经验，30+专业团队。'
+      : 'Y&Y Design Build is a Vancouver-based full-service design and construction firm specializing in commercial and residential renovations.',
+  };
+}
 
 export default async function AboutUsPage({
   params,

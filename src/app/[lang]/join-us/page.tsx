@@ -1,8 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
 import JoinUsForm from './JoinUsForm';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh' }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === 'zh' ? '加入我们' : 'Join Us',
+    description: lang === 'zh'
+      ? '加入右岩建筑团队，我们正在招聘设计师、项目经理助理、工地主管等职位。'
+      : 'Join the Y&Y Construction team. We are hiring interior designers, PM assistants, and site supervisors.',
+  };
+}
 
 export default async function JoinUsPage({
   params,

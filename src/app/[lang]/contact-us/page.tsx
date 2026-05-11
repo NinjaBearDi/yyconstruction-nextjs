@@ -1,7 +1,18 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
 import ContactForm from './ContactForm';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh' }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === 'zh' ? '联系我们' : 'Contact Us',
+    description: lang === 'zh'
+      ? '免费咨询您的装修需求，我们通常在2-3个工作日内回复。电话：+1 (604) 349-9888'
+      : 'Get a free consultation for your renovation needs. We typically respond within 2-3 business days. Call: +1 (604) 349-9888',
+  };
+}
 
 export default async function ContactUsPage({
   params,

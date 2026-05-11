@@ -1,8 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/get-dictionary';
 import PageHeader from '@/components/ui/PageHeader';
 import FaqAccordion from './FaqAccordion';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: 'en' | 'zh' }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: lang === 'zh' ? '常见问题' : 'FAQ',
+    description: lang === 'zh'
+      ? '关于装修服务、价格、工期、售后等常见问题解答。'
+      : 'Frequently asked questions about our renovation services, pricing, timelines, and after-sales support.',
+  };
+}
 
 const SUPA_BASE = 'https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets';
 

@@ -16,6 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: 'en
   };
 }
 
+export const revalidate = 3600;
+
 const S3_BASE = 'https://dp-prod.s3.us-east-2.amazonaws.com/img/tmp/yyconstruction.ca';
 
 export default async function OurTeamPage({

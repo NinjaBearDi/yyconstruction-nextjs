@@ -7,6 +7,8 @@ import HowWeWork from '@/components/home/HowWeWork';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
 import { getProjects } from '@/lib/payload/project-queries';
 
+export const revalidate = 3600;
+
 export default async function HomePage({
   params
 }: {

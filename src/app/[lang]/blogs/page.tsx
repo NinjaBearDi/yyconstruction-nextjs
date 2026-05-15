@@ -14,6 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: 'en
   };
 }
 
+export const revalidate = 3600;
+
 export default async function BlogsPage({
   params,
 }: {

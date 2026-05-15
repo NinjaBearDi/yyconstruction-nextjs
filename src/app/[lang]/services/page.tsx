@@ -15,6 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: 'en
   };
 }
 
+export const revalidate = 3600;
+
 const serviceLinksAndImages = [
   {
     image: 'https://jirhzzpaqwwoqshfhawu.supabase.co/storage/v1/object/public/yyconstruction-assets/MainPage/OurServices/img_service-1.jpg',

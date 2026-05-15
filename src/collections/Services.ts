@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { isAdminOrEditor } from '@/lib/payload/access'
+import { revalidateCollectionHook } from '@/lib/payload/revalidate-hook'
 
 export const Services: CollectionConfig = {
   slug: 'services',
@@ -12,6 +13,9 @@ export const Services: CollectionConfig = {
     create: isAdminOrEditor,
     update: isAdminOrEditor,
     delete: isAdminOrEditor,
+  },
+  hooks: {
+    afterChange: [revalidateCollectionHook],
   },
   fields: [
     {

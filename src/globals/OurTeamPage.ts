@@ -1,5 +1,6 @@
 import type { GlobalConfig } from 'payload'
 import { isAdminOrEditor } from '@/lib/payload/access'
+import { revalidateGlobalHook } from '@/lib/payload/revalidate-hook'
 
 export const OurTeamPage: GlobalConfig = {
   slug: 'our-team-page',
@@ -7,6 +8,9 @@ export const OurTeamPage: GlobalConfig = {
   access: {
     read: () => true,
     update: isAdminOrEditor,
+  },
+  hooks: {
+    afterChange: [revalidateGlobalHook],
   },
   fields: [
     {
